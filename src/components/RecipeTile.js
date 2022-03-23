@@ -1,7 +1,8 @@
-/*import React from "react";
-import "./style.css";
+import React from "react";
+import "../styles/RecipeTile.css";
 
 function RecipeTile({ recipe }) {
+  console.log("recipe", recipe)
   return (
     recipe["recipe"]["image"].match(/\.(jpeg|jpg|gif|png)$/) != null && (
       <div className="recipeTile">
@@ -17,4 +18,4 @@ function RecipeTile({ recipe }) {
   );
 }
 
-export default RecipeTile;*/
+export default RecipeTile;
