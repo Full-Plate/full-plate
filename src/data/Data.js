@@ -1,4 +1,4 @@
-import Chole from "../assets/chhola.jpg";
+/*import Chole from "../assets/chhola.jpg";
 import Dosa from "../assets/dosa.jpg";
 import Paneer from "../assets/paneer.jpg";
 import Idli from "../assets/idli.jpg";
@@ -43,3 +43,4 @@ export const Data = [{
        
     },
 ];
+*/
