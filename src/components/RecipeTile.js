@@ -1,8 +1,8 @@
 import React from "react";
 
-function RecipeItem({ image, name, info }) {
+function RecipeTile({ image, name, info }) {
   return (
-    <div className="recipeItem">
+    <div className="RecipeTile">
       <div style={{ backgroundImage: `url(${image})` }}> </div>
       <h1> {name} </h1>
       <p> {info} </p>
@@ -10,4 +10,4 @@ function RecipeItem({ image, name, info }) {
   );
 }
 
-export default RecipeItem;
+export default RecipeTile;

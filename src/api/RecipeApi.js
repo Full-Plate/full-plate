@@ -1,8 +1,8 @@
-/*import { useState } from "react";
+import { useState } from "react";
 import Axios from "axios";
-import RecipeTitle from "../hooks/recipeTitle";
+import RecipeTile from "../components/RecipeTile";
 
-function App() {
+function RecipeApi() {
   const YOUR_APP_ID = "7184cf21";
   const YOUR_APP_KEY = "a9337d6a73353c7c9921eb69850b411c";
   const [query, setQuery] = useState("");
@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="Recipes">
       <h1 onClick={getRecipeInfo}>
         <u>Food Recipe Hub</u>🥗
       </h1>
@@ -99,5 +99,4 @@ function App() {
   );
 }
 
-export default App;
-*/
+export default RecipeApi;
