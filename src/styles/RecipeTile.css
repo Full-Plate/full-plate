@@ -26,8 +26,8 @@
   padding: 6px 16px;
   font-size: 17px;
   margin-left: 6px;
-  background-color: #F9B686;;
-  border: 2px solid #F9B686;;
+  background-color: #F9B686;
+  border: 2px solid #F9B686;
   border-radius: 15px;
   color: white;
   cursor: pointer;
@@ -38,9 +38,9 @@
   font-size: 17px;
   margin-left: 6px;
   background-color: white;
-  border: 2px solid green;
+  border: 2px solid #F9B686;
   border-radius: 15px;
-  color: green;
+  color: #F9B686;
   cursor: pointer;
 }
 
