@@ -14,10 +14,11 @@ function Home() {
             have on hand. We believe that mindful meal planning is not confined
             to your kitchen. Join us on a journey towards a Full Plate - both for yourself
             and for others</p>
-          </div>
+        </div>
           <Link to="/Recipes">
-            <button> Get Started</button>
+          <button> Get Started</button>
           </Link>
+          
       </div>
     </div>
   );
