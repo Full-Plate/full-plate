@@ -1,12 +1,21 @@
 import React from "react";
 
-function RecipeTile({ image, name, info }) {
+import "../styles/RecipeTile.css";
+
+function RecipeTile({ recipe }) {
+  console.log("recipe", recipe)
   return (
-    <div className="RecipeTile">
-      <div style={{ backgroundImage: `url(${image})` }}> </div>
-      <h1> {name} </h1>
-      <p> {info} </p>
-    </div>
+    recipe["recipe"]["image"].match(/\.(jpeg|jpg|gif|png)$/) != null && (
+      <div className="recipeTile">
+        <img
+          className="recipeTile__image"
+          src={recipe["recipe"]["image"]}
+          alt="tile-image"
+          onClick={() => window.open(recipe["recipe"]["url"])}
+        />
+        <p className="recipeTile__name">{recipe["recipe"]["label"]}</p>
+      </div>
+    )
   );
 }
 
