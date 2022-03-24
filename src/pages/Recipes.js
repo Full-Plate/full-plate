@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Axios from "axios";
 import RecipeTile from "../components/RecipeTile";
-import "../styles/RecipeTile.css";
+
+//styles
 import "../styles/Recipes.css";
+import "../styles/RecipeTile.css";
+import  cookingPot  from '../assets/cookingPot.svg';
 
 function Recipes() {
   const YOUR_APP_ID = "17d531d8";
@@ -25,82 +28,33 @@ function Recipes() {
   };
 
   return (
-    <div class="grid-container">
     <div className="app">
+      <img class="cookingpot" src={cookingPot} alt="icon" />
      <h1 className="pageTitle">Recipes</h1>
-      <h1 onClick={getRecipeInfo}>
-        <u>Search</u>
-      </h1>
-      <form className="app__searchForm" onSubmit={onSubmit}>
-        <input
+      <h1 onClick={getRecipeInfo}></h1>
+      <form class="search" onSubmit={onSubmit}>
+       <input
           type="text"
-          placeholder="Type the Ingredient"
+          placeholder="What´s left in my fridge?"
           autoComplete="Off"
           className="app__input"
           value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
+          onChange={(e) => {setQuery(e.target.value);
+        <input type = "submit"
+               value = "Get Recipe"
+               className = "app__submit" />
           }}
         />
-        <select className="app__healthLabels">
-          <option
-            value="vegan"
-            onClick={() => {
-              setHealthLabel("vegan");
-            }}
-          >
-            vegan
-          </option>
-          <option
-            value="vegetarian"
-            onClick={() => {
-              setHealthLabel("vegetarian");
-            }}
-          >
-            vegetarian
-          </option>
-          <option
-            value="low-sugar"
-            onClick={() => {
-              setHealthLabel("low-sugar");
-            }}
-          >
-            low-sugar
-          </option>
-          <option
-            value="dairy-free"
-            onClick={() => {
-              setHealthLabel("dairy-free");
-            }}
-          >
-            dairy-free
-          </option>
-          <option
-            value=" immuno-supportive "
-            onClick={() => {
-              setHealthLabel(" immuno-supportive ");
-            }}
-          >
-            immuno-supportive
-          </option>
-          <option
-            value="wheat-free"
-            onClick={() => {
-              setHealthLabel("wheat-free");
-            }}
-          >
-            wheat-free
-          </option>
-        </select>
-        <input type="submit" value="Get Recipe" className="app__submit" />
+  
       </form>
       <div className="app__recipes">
         {recipes.map((recipe) => {
           return <RecipeTile recipe={recipe} />;
-        })}
-      </div>
+           })}
+         </div>
+  
     </div>
-    </div>
+  
   );
 }
 
