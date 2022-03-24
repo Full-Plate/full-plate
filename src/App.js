@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 //pages 
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/recipes" element={<Recipes/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </Router>
     </div>
