@@ -10,6 +10,13 @@
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
 }
+.banner {
+  margin-top: 80px;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+ 
+}
 
 .headerContainer {
   width: auto;

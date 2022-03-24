@@ -25,6 +25,7 @@ function Recipes() {
   };
 
   return (
+    <div class="grid-container">
     <div className="app">
      <h1 className="pageTitle">Recipes</h1>
       <h1 onClick={getRecipeInfo}>
@@ -99,7 +100,7 @@ function Recipes() {
         })}
       </div>
     </div>
-    
+    </div>
   );
 }
 
