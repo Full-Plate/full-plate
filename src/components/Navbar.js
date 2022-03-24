@@ -29,7 +29,7 @@ function Navbar() {
       <div className="rightSide">
         <ul>
           <li>
-            {/* <Link to="/"> Home </Link> */}
+            <Link to="/"> Home </Link>
             <Link to="/about"> About </Link>
             <Link to="/contact"> Contact </Link>
              <Link to = "/Recipes" > Recipes </Link> 
