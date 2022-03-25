@@ -1,80 +1,61 @@
-.contact {
-  width: 100%;
-  height: 90vh;
-  display: flex;
+form { max-width:420px; margin:50px auto; }
+
+
+.container{
+  border: solid 1px;
+  background: rgba(81, 103, 155, 0.5);
+  border-radius: 20px;
+  width: 576px;
+height: 520px;
+left: 607px;
+top: 294px;
 }
 
-.contact .leftSide {
-  height: 100%;
-  flex: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.feedback-input {
+  color:white;
+  font-family: 'Montserrat', sans-serif;;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid  #F9B686;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
 }
 
-.contact .rightSide {
-  height: 100%;
-  flex: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.feedback-input:focus { border:2px solid #F9B686;
+ }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
 }
 
-.contact .rightSide h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 10;
-  font-size: 50px;
-  margin-left: 30px;
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 166px;
+  height: 54px;
+  left: 35px;
+  top: 446px;
+  background: #F9B686;
+  box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
+  border-radius: 20px;
+  border:0;
+  cursor:pointer;
+  color:black;
+  font-size:24px;
+  font-weight: 500px;
+  line-height: 24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: auto;
-  padding: 30px;
-}
-
-form input {
-  height: 40px;
-  width: 80%;
-  border: none;
-  border-bottom: 1px solid #121619;
-  color: black;
-}
-
-form textarea {
-  margin-top: 15px;
-  height: 70px;
-  width: 80%;
-  border: none;
-  border-bottom: 1px solid #121619;
-  color: black;
-}
-input::placeholder,
-textarea::placeholder {
-  font-weight: bold;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-}
-form input:focus,
-textarea:focus {
-  outline: none;
-}
-
-form label {
-  margin-top: 15px;
-  color: grey;
-}
-
-form button {
-  margin-top: 40px;
-  width: 140px;
-  height: 40px;
-  border: none;
-  background-color: #121619;
-  color: whitesmoke;
-  font-size: 15px;
-  cursor: pointer;
-}
+[type="submit"]:hover { background:#F9B686; }

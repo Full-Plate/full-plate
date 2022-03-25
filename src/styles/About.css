@@ -1,7 +1,11 @@
 * {
   box-sizing: border-box;
+  margin:0; padding:0; 
+  transition: all .2s linear;
+  font-family: 'Montserrat', sans-serif;;
  
 }
+
 h1{
   text-align: center;
   font-size:42px;
@@ -9,40 +13,27 @@ h1{
   line-height: 51.2px;
 }
 
-.container-about {
-  display: flex;
-  width: 1040px;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  grid-template-columns:60px 60px ;
-
-}
-.card-about {
-  margin: 10px;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 339;
-  width: 458px;
-  background-color:rgba(250, 193, 107, 0.5);
-}
-.card-header-about-image {
-  width: auto;
-  height: 200px;
-  object-fit: cover;
-}
-.card-body-about {
-  display: flex;
-  justify-content: space-between;
-	padding: 1.5rem;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  min-height: 250px;
-  
+.container {
+ max-width:1200 px;
+ margin:0 auto;
+ padding: 3rem 2 rem;
 }
 
-.card-body-about p {
-  font-size: 18px;
-  margin: 0 0 40px;
+.container .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rex, 1fr));
+  gap:2rem;
+
+}
+.container .products-container .about-image {
+  text-align: center;
+  padding: 3rem 3rem;
+  background: rgba(250, 193, 107, 0.5);
+  cursor: pointer;
+}
+.container .products-container .about-image .img{
+  height: 339px;
+  width: 339px;
+
+
 }

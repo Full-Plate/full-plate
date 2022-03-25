@@ -2,30 +2,28 @@ import React from "react";
 
 import "../styles/Contact.css";
 
-//Images
 
 
 function Contact() {
   return (
     <div className="contact">
-    
-      <div className="rightSide">
-        <h1> Contact Us</h1>
-        <form id="contact-form" method="POST">
-          <label htmlFor="name">Full Name</label>
-          <input name="name" placeholder="Enter full name..." type="text" />
-          <label htmlFor="email">Email</label>
-          <input name="email" placeholder="Enter email..." type="email" />
-          <label htmlFor="message">Message</label>
-          <textarea
-            rows="6"
-            placeholder="Enter message..."
-            name="message"
-            required
-          ></textarea>
-          <button type="submit"> Send Message</button>
-        </form>
-      </div>
+    <h1>We´d love to hear from you!</h1>
+    <p>Got Something you can´t wait to share with us?
+    </p>
+    < br />
+    <p>Be it Suggestions, feedback, business opportunities or even how our recipes made you hungry, we´d love to hear from you!</p>
+< container >
+<form>
+     
+  <input name="name" type="text" class="feedback-input" placeholder="How do we address you?" />   
+  <input name="email" type="text" class="feedback-input" placeholder="Your Email" />
+  <textarea name="text" class="feedback-input" placeholder="What would you like to say?"></textarea>
+  <input type="submit" value="Send"/>
+  
+</form>
+</container> 
+
+      
     </div>
   );
 }
