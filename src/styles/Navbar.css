@@ -1,5 +1,5 @@
 /* typography */
- a {
+ .navbar a {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -15,7 +15,7 @@
   /* margin-right: 160px; */
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: right;
  
 }
 
@@ -25,7 +25,7 @@
 
 }
 
-a {
+.navbar a {
   margin: 40px;
   text-decoration: none;  
 }
@@ -44,7 +44,7 @@ a {
 }
 
 .navbar .leftSide {
-  flex: 50%;
+  flex: 10%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@ a {
 }
 
 .navbar .rightSide {
-  flex: 50%;
+  flex: 90%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -107,6 +107,8 @@ a {
   width: 70px;
   margin: 5px;
 }
+
+
 @media only screen and (max-width: 900px) {
   .navbar .rightSide a {
     width: 70px;
@@ -133,16 +135,24 @@ a {
 
 /* media query to manage the reponsiveness of webpage*/
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1186px) {
+  .navbar a {
+    font-size: 15px;
+    margin: 10px;
+  }
+
+}
+
+/* @media only screen and (max-width: 900px) {
   .navbar .rightSide a {
     width: 70px;
   }
   .navbar .leftSide {
     padding-left: 50px;
   }
-}
+} */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 690px) {
   .navbar .rightSide a {
     display: none;
   }
@@ -157,7 +167,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 690px) {
   .navbar .rightSide button {
     display: none;
   }
