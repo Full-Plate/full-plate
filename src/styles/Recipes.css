@@ -10,7 +10,6 @@ box-sizing:border-box;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 40px 24px;
   }
 
 .pageTitle{
@@ -18,7 +17,6 @@ box-sizing:border-box;
   font-size:42px ;
   font-weight: 600;
   line-height: 51.2px;
-  margin-top: 59px;
   margin-left: 457px;
   margin-right:752px;
   display:flex;
@@ -61,6 +59,9 @@ transform-style: preserve-3d;
 }
 
 .cookingpot{
+  position:relative;
+  right: 410px;
+  top: 190px;
   width: 250px;
   float:left;
   height: auto;
