@@ -1,37 +1,48 @@
-.about {
-  width: 100%;
-  height: 90vh;
+* {
+  box-sizing: border-box;
+ 
+}
+h1{
+  text-align: center;
+  font-size:42px;
+  font-weight: 600;
+  line-height: 51.2px;
+}
+
+.container-about {
   display: flex;
-  flex-direction: column;
-}
+  width: 1040px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  grid-template-columns:60px 60px ;
 
-.aboutTop {
-  width: 100%;
-  height: 45%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
-.aboutBottom {
+.card-about {
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 339;
+  width: 458px;
+  background-color:rgba(250, 193, 107, 0.5);
+}
+.card-header-about-image {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+.card-body-about {
   display: flex;
-  flex-direction: column;
-  height: 55%;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.aboutBottom p {
-  width: 1200px;
-}
-
-.about .aboutBottom h1 {
-  font-weight: 400;
-  font-size: 70px;
-  color: black;
-  height: 30px;
-  display: flex;
+  justify-content: space-between;
+	padding: 1.5rem;
+  flex-direction: row;
   justify-content: center;
-  transform: translateY(-40px);
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 250px;
+  
+}
+
+.card-body-about p {
+  font-size: 18px;
+  margin: 0 0 40px;
 }
