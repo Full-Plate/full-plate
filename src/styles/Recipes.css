@@ -11,9 +11,7 @@ box-sizing:border-box;
   flex-direction: column;
   align-items: center;
   padding: 40px 24px;
-  
-
-}
+  }
 
 .pageTitle{
   text-align: center;
