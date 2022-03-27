@@ -1,14 +1,14 @@
 
 
 /* THE CARD */
-.card-container1{
+.tile-card-container1{
 	width: 33%;
 	justify-content: space-between;
 	margin: 0%;
 
 }
 
-.card {
+.tile-card {
 	background-color: #FFDBA4;
 	border-radius: 20px;
 	border: 1px solid rgba(250, 193, 107, 0.5);
@@ -18,20 +18,20 @@
 	
 }
 
- .recipeTile-image {
+ .tile-recipeTile-image {
 	width: 100%;
 	margin-bottom:10px;
 	border-radius:20px 20px 0px 0px;
 
 }
 
-.card-body {
+.tile-card-body {
   display: flex;
   height: 70px;
   margin-left: 1rem;
 }
 
-.card-title{
+.tile-card-title{
 	font-size: 20px;
 	text-align: left;
 
