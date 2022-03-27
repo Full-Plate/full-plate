@@ -1,37 +1,43 @@
 
 
-*, *:after, *:before {
-	box-sizing: border-box;
-}
-
-
-
 /* THE CARD */
+.card-container1{
+width: 33%;
+justify-content: space-between;
+margin: 0%;
+
+}
 
 .card {
-  flex-basis: 300px;
-	flex-shrink: 0;
-	flex-grow: 0;
-	max-width: 100%;
 	background-color: #FFDBA4;
 	border-radius: 20px;
-	overflow: hidden;
-	margin: 1rem;
+	border: 1px solid rgba(250, 193, 107, 0.5);
+	flex-wrap: wrap;
+	margin: 15px;
+
+	
 }
 
- .card.card-img {
-  display: block;
-	border: 0;
+ .recipeTile-image {
 	width: 100%;
-	height: auto;
+	margin-bottom:10px;
+	border-radius:20px 20px 0px 0px;
+
 }
 
 .card-body {
   display: flex;
-  justify-content: space-between;
-	padding: 1.5rem;
+  height: 70px;
+  margin-left: 1rem;
 }
 
+.card-title{
+	font-size: 20px;
+	text-align: left;
+
+	
+	
+}
 
 
 

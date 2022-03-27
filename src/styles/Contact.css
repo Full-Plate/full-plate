@@ -1,15 +1,5 @@
-form { max-width:420px; margin:50px auto; }
 
 
-.container{
-  border: solid 1px;
-  background: rgba(81, 103, 155, 0.5);
-  border-radius: 20px;
-  width: 576px;
-height: 520px;
-left: 607px;
-top: 294px;
-}
 
 .feedback-input {
   color:white;

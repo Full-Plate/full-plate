@@ -10,8 +10,7 @@ import "../styles/About.css";
 
 function About() {
   return (
-  
-  <div class="container">
+  <>
     <h1 class="title">Here is how we can help!</h1>
 
     <div class="products-container">
@@ -33,8 +32,8 @@ function About() {
    <h1>
        Meet the Team!
       </h1>
-  </div>
- 
+
+ </>
   );
   }
 

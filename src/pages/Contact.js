@@ -12,16 +12,6 @@ function Contact() {
     </p>
     < br />
     <p>Be it Suggestions, feedback, business opportunities or even how our recipes made you hungry, we´d love to hear from you!</p>
-< container >
-<form>
-     
-  <input name="name" type="text" class="feedback-input" placeholder="How do we address you?" />   
-  <input name="email" type="text" class="feedback-input" placeholder="Your Email" />
-  <textarea name="text" class="feedback-input" placeholder="What would you like to say?"></textarea>
-  <input type="submit" value="Send"/>
-  
-</form>
-</container> 
 
       
     </div>

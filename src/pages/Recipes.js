@@ -28,10 +28,11 @@ function Recipes() {
   };
 
   return (
-    <div className="app">
-      <img class="cookingpot" src={cookingPot} alt="icon" />
+    <>
+    <div className="recipesHeader">
+    <img className="cookingpot" src={cookingPot} alt="icon" />
+    <div className="searchHeader">
      <h1 className="pageTitle">Recipes</h1>
-      <h1 onClick={getRecipeInfo}></h1>
       <form class="search" onSubmit={onSubmit}>
        <input
           type="text"
@@ -45,15 +46,16 @@ function Recipes() {
                className = "app__submit" />
           }}
         />
-  
       </form>
+      </div>
+      </div>
       <div className="app__recipes">
         {recipes.map((recipe) => {
           return <RecipeTile recipe={recipe} />;
            })}
          </div>
   
-    </div>
+  </>
   
   );
 }
