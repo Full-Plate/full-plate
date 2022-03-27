@@ -30,7 +30,7 @@ section {
 .headerContainer h1 {
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 50;
   color: black;
   width: 376px;
@@ -42,7 +42,7 @@ section {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 25px;
   color: #101828;
   width: 411px;
