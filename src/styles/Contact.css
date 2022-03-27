@@ -1,51 +1,118 @@
 
+.contact-container {
+  display: flex;
+}
 
+.contact-header{
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 51px;
+}
 
-.feedback-input {
-  color:white;
-  font-family: 'Montserrat', sans-serif;;
-  font-weight:500;
+.contact-text{
+ 
+  width: 250px;
+  height: auto;
+  font-weight: 400;
   font-size: 18px;
-  border-radius: 5px;
-  line-height: 22px;
-  background-color: transparent;
-  border:2px solid  #F9B686;
-  transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
-  width:100%;
-  box-sizing: border-box;
-  outline:0;
+  line-height: 25px;
+
 }
 
-.feedback-input:focus { border:2px solid #F9B686;
- }
-
-textarea {
-  height: 150px;
-  line-height: 150%;
-  resize:vertical;
-}
-
-[type="submit"] {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 166px;
-  height: 54px;
-  left: 35px;
-  top: 446px;
-  background: #F9B686;
-  box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
+.card {
+  width: 120%;
+  padding: 30px 90px 90px 90px;
+  background: rgba(81, 103, 155, 0.5);
+  box-shadow: 10px 10px 0 rgba(81, 103, 155, 0.5);
   border-radius: 20px;
-  border:0;
-  cursor:pointer;
-  color:black;
-  font-size:24px;
-  font-weight: 500px;
-  line-height: 24px;
-  padding-top:10px;
-  padding-bottom:10px;
-  transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
 }
-[type="submit"]:hover { background:#F9B686; }
+
+.card .row {
+  position: relative;
+  width: 100%;
+}
+
+.card .row .col {
+  position: relative;
+  width: 120%;
+  margin: 30px 20px 40px 0;
+  transition: 0.5s;
+}
+
+.card .row .form-group {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
+.card .row .form-group input,
+.card .row .form-group textarea {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  outline: none;
+  font-size: 24px;
+  padding: 10px 0 10px 20px;
+  border: 1px solid #667085;
+  box-shadow: 2px 2px 0 #667085;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.card .row .form-group label {
+  line-height: 29px;
+  color: #101828;
+  font-size: 24px;
+  margin: 0 0 0 30px;
+  display: block;
+  pointer-events: none;
+}
+
+
+
+.card .row .form-group input:focus,
+.card .row .form-group textarea:focus {
+  border: 5px solid #ffffff;
+  transition: all 0.5s;
+}
+
+.card .row input[type="submit"] {
+  border: 1px solid #667085;
+  box-shadow: 10px 10px 0 #667085;
+  padding: 10px;
+  height: 100%;
+  width: 50%;
+  cursor: pointer;
+  outline: none;
+  background: #F9B686;;
+  color: #101828;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+.card .row input[type="submit"]:hover {
+  border: 5px solid rgba(255, 255, 255, 1);
+  color: #ffffff;
+  transition: all 0.4s;
+}
+
+@media screen and (max-width: 900px) {
+  .card .row {
+    grid-template-columns: repeat(auto-fit,minmax(70%, 1fr));
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 34px;
+  }
+  
+  .card .row input[type="submit"] {
+    width: 100%;
+  }
+}
