@@ -50,6 +50,7 @@
   
 }
 .headerContainer button{
+  font-family: 'Montserrat', sans-serif;
   color: #101828;
   font-weight: 400;
   font-size: 18px;
@@ -63,6 +64,7 @@
   cursor: pointer;
 }
 .headerContainer button:hover {
+  font-family: 'Montserrat', sans-serif;
   background-color: #f1b587;
   cursor: pointer;
   transition: 0.3s ease-in;
