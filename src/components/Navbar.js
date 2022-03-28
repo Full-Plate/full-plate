@@ -2,21 +2,24 @@ import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
+
 import "../styles/Navbar.css";
 
-function Navbar() {
+/*function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
 
   const toggleNavbar = () => {
     setOpenLinks(!openLinks);
-  };
+  };*/
+
+  const Navbar = ( ) =>{
   return (
-    <div className="navbar">
-      <div className="leftSide" id={openLinks ? "open" : "close"}>
-        <img src={Logo}/>
-        <div className="hiddenLinks">
-          <ul>
-            <li>
+  <nav> 
+    <div className="logo">
+      <img src={Logo}/>
+        </div >
+         < ul className ="navLinks-ul">
+            <li className="navLinks-li">
               <Link to = "/" > Home </Link>
               <Link to="/about"> About </Link>
               <Link to="/Recipes"> Recipes </Link>
@@ -24,24 +27,8 @@ function Navbar() {
               <Link to = "/contact" > Contact </Link>
             </li>
           </ul>
-        </div>
-      </div>
-      <div className="rightSide">
-        <ul>
-          <li>
-            <Link to="/"> Home </Link>
-            <Link to="/about"> About </Link>
-            <Link to="/contact"> Contact </Link>
-             <Link to = "/Recipes" > Recipes </Link> 
-             <Link to = "/Donate" > Donate Food </Link>
-            <button onClick={toggleNavbar}>
-              <MenuIcon />
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
+          </nav>
+        );
 }
 
 export default Navbar;
