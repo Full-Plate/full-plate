@@ -24,7 +24,7 @@
 
  .tile-recipeTile-image {
 	width: 100%;
-	margin-bottom:10px;
+	margin-bottom:auto;
 	border-radius:20px 20px 0px 0px;
 
 }
@@ -37,8 +37,14 @@
 }
 
 .tile-card-title{
+
 	font-size: 2rem;
 	margin-top: -10px;
+
+	font-size: 20px;
+	text-align: left;
+	margin: auto;
+
 
 }
 
