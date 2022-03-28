@@ -5,29 +5,29 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import "../styles/Navbar.css";
 
-/*function Navbar() {
+function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
-
   const toggleNavbar = () => {
-    setOpenLinks(!openLinks);
-  };*/
-
-  const Navbar = ( ) =>{
+      setOpenLinks(!openLinks);
+  };
   return (
+    <>
   <nav> 
     <div className="logo">
       <img src={Logo}/>
         </div >
-         < ul className ="navLinks-ul">
-            <li className="navLinks-li">
-              <Link to = "/" > Home </Link>
-              <Link to="/about"> About </Link>
-              <Link to="/Recipes"> Recipes </Link>
-              <Link to = "/Donate" > Donate Food </Link>
-              <Link to = "/contact" > Contact </Link>
-            </li>
+         < ul className ="navLinks">
+           <li className="items"><Link to = "/" > Home </Link> </li>
+              <li className = "items"><Link to = "/about" > About </Link> </li >
+              <li className = "items"><Link to = "/Recipes" > Recipes </Link> </li >
+               <li className = "items"><Link to = "/Donate" > Donate Food </Link></li >
+              <li className = "items"><Link to = "/contact" > Contact </Link></li >
+               <button onClick={toggleNavbar}>
+              <MenuIcon />
+            </button>
           </ul>
           </nav>
+          </>
         );
 }
 
