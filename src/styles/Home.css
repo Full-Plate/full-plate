@@ -3,7 +3,7 @@
 }
 .banner{
   position: absolute; 
-  top: 0; 
+  top: 200px;
   left: 0; 
   right: 0; 
   bottom: 0; 
@@ -12,7 +12,6 @@
   min-height: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 200px;
   z-index: -1;
 }
 .column1 {
@@ -37,28 +36,17 @@
   width: 180%;
 }
 
-<<<<<<< HEAD
-.headerContainer h1 {
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  font-weight: 50;
-  color: black;
-  width: 376px;
-  height: 74px;
-  margin-bottom: 5px;
-=======
-.hometitle{
+
+.hometitle {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 700px;
   line-height: 37px;
-  
->>>>>>> d160ce659a1e95197f210d21765cb9d1ec49c150
+
 }
 
 .discritpion{
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 25px;
   
 }
