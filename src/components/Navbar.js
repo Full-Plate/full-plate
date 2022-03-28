@@ -5,6 +5,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import "../styles/Navbar.css";
 
+import HamburgerMenu from "./hamburgerMenu/HamburgerMenu";
+
 function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
   const toggleNavbar = () => {
@@ -13,9 +15,9 @@ function Navbar() {
   return (
     <>
   <nav>  
-    <button className="MenuIcon" onClick={toggleNavbar}>
-              <MenuIcon />
-            </button>
+    <HamburgerMenu>
+    
+    </HamburgerMenu>
     <div className="logo">
       <img src={Logo}/>
         </div >
