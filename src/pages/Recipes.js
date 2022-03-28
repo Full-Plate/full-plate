@@ -4,7 +4,6 @@ import RecipeTile from "../components/RecipeTile";
 
 //styles
 import "../styles/Recipes.css";
-import "../styles/RecipeTile.css";
 import  cookingPot  from '../assets/cookingPot.svg';
 
 function Recipes() {

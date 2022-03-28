@@ -11,6 +11,8 @@ import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Donate from "./pages/Donate";
+
 
 function App() {
   return (
@@ -21,8 +23,9 @@ function App() {
         <div class="container">
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/recipes" element={<Recipes/>} />
           <Route path="/about" element={<About/>} />
+          <Route path="/recipes" element={<Recipes/>} />
+          <Route path="/donate" element={<Donate/>} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
         </div>
