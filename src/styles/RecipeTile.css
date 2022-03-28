@@ -2,10 +2,14 @@
 
 /* THE CARD */
 .tile-card-container1{
-	width: 33%;
-	justify-content: space-between;
+	width: 400px;
+	justify-content: space-evenly;
 	margin: 0%;
 
+}
+
+.tile-card-container1{
+	cursor: pointer;
 }
 
 .tile-card {
@@ -29,15 +33,19 @@
   display: flex;
   height: 70px;
   margin-left: 1rem;
+	/* margin: 20px; */
 }
 
 .tile-card-title{
+
+	font-size: 2rem;
+	margin-top: -10px;
+
 	font-size: 20px;
 	text-align: left;
 	margin: auto;
 
-	
-	
+
 }
 
 
