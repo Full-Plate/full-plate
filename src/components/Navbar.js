@@ -22,7 +22,7 @@ function Navbar() {
               <li className = "items"><Link to = "/Recipes" > Recipes </Link> </li >
                <li className = "items"><Link to = "/Donate" > Donate Food </Link></li >
               <li className = "items"><Link to = "/contact" > Contact </Link></li >
-               <button onClick={toggleNavbar}>
+               <button className="MenuIcon" onClick={toggleNavbar}>
               <MenuIcon />
             </button>
           </ul>
