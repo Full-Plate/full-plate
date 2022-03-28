@@ -15,9 +15,7 @@ function Navbar() {
   return (
     <>
   <nav>  
-    <HamburgerMenu>
-    
-    </HamburgerMenu>
+    <HamburgerMenu />
     <div className="logo">
       <img src={Logo}/>
         </div >
