@@ -7,20 +7,25 @@ function RecipeTile({ recipe }) {
   return (
     
     recipe["recipe"]["image"].match(/\.(jpeg|jpg|gif|png)$/) != null && (
-      
-      <article className="recipeTile">
-       < div className = 'img-container' >
-        <img
-          className="recipeTile__image"
+      <div className="card-container1">
+      <div className="card">
+			<img
+          className="recipeTile-image"
           src={recipe["recipe"]["image"]}
           alt="tile-image"
           onClick={() => window.open(recipe["recipe"]["url"])}
-        /> </div >
-        <div className='recipe-footer'>
-        <p className="recipeTile__name">{recipe["recipe"]["label"]}</p>
-        </div>
-      </article>
-      
+        />
+        <div className="card-body">
+			<h2 className="card-title ">
+				<p>{recipe["recipe"]["label"]}</p>
+			</h2>
+		</div>
+		</div>
+      </div>
+
+
+
+
     )
     
   );

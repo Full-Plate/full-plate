@@ -14,17 +14,22 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
+  
     <div className="App">
       <Router>
         <Navbar />
+        <div class="container">
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/recipes" element={<Recipes/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
         </Routes>
+        </div>
       </Router>
     </div>
+    
+
   );
 }
 
