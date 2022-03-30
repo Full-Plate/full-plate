@@ -9,9 +9,9 @@ const [close, setClose] = useState(false)
 
       <div style={ 
         close ? 
-        { backgroundColor:'red', 
+        { backgroundColor:'', 
         transform: 'rotate(45deg)',
-        transformOrigin: '1px'} 
+        transformOrigin: '-4px'} 
         : // false statement 
         {backgroundColor: 'black', 
         transform: 'rotate(0deg)',
@@ -21,7 +21,7 @@ const [close, setClose] = useState(false)
       
       <div style={ 
         close ? 
-        { backgroundColor:'red', 
+        { backgroundColor:'', 
         transform: 'translateX(100%)',
         transformOrigin: '1px', 
         opacity: '0'} 
@@ -34,9 +34,9 @@ const [close, setClose] = useState(false)
       
       <div style={ 
         close ? 
-        { backgroundColor:'red', 
+        { backgroundColor:'', 
         transform: 'rotate(-45deg)',
-        transformOrigin: '1px'} 
+        transformOrigin: '-2px'} 
         : // false statement 
         {backgroundColor: 'black', 
         transform: 'rotate(0deg)'
