@@ -1,34 +1,71 @@
-
-nav {
- display:flex;
- justify-content: space-around;
- background: #FEFEFE;
- filter: drop-shadow(0px 3px 25px rgba(102, 112, 133, 0.25));
- padding: 5px 0px 5px 0px;
+*{
+  padding: 0;
+  margin: 0;
 }
 
-a{
+nav {
+ justify-content: center;
+ display:flex;
+ height: 115px;
+ background: #FEFEFE;
+ filter: drop-shadow(0px 3px 25px rgba(102, 112, 133, 0.25));
+}
+
+.navLinks a{
+  position: relative;
   text-decoration: none;
   color:#101828;
-  
+}
+
+.navLinks a::after {
+ content: "";
+ position: absolute;
+ background: rgba(81, 103, 155, 0.5);
+ height: 5px;
+ width: 100%;
+ left: -4px;
+ bottom: -3px;
+ border-radius: 20px;
+ opacity: 0;
+ transition: 0.4s ease-out;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+  height: 5px;
+  opacity: 1;
+}
+
+ul.navLinks {
+  display: flex;
+  width: 760px;
+  justify-content: space-between;
 }
 
 .navLinks{
-  display: flex;
-  position: relative;
+  
+  position: absolute;
   list-style-type: none;
-  justify-content: space-around;
-  width: 50%;
   text-decoration: none;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+ 
+  right:29px;
+  top: 43px;
+  margin: 0;
 }
 
 .logo{
+  position: absolute;
+  top: 17.39%;
+  left: 4.24%;
+  right: 85.35%;
+  bottom: 18.26%;
   display: flex;
   width: 141px;
   height: 70px;
+  
   }
 
   .MenuIcon{
@@ -39,6 +76,37 @@ a{
     padding: 5px;
     font-size: 18px;
     
+  }
+
+  @media screen and (max-width: 1015px) {
+   
+    ul.navLinks {
+      width: 700px;
+      font-size: 2.2rem;
+      justify-content: space-evenly;
+    }
+
+  }
+
+  @media screen and (max-width: 938px) {
+
+    ul.navLinks {
+      width: 650px;
+      justify-content: space-evenly;
+    }
+
+  }
+
+
+  @media screen and (max-width: 896px) {
+
+    ul.navLinks {
+      display: none;
+    }
+    
+    .logo {
+      position: relative;
+    }
   }
 
   @media screen and (max-width: 500px){
