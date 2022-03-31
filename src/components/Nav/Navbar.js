@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 
-import "../styles/Navbar.css";
+import "../../styles/Navbar.css";
 
-import HamburgerMenu from "./hamburgerMenu/HamburgerMenu";
+import HamburgerMenu from "./HamburgerMenu";
 
 function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);

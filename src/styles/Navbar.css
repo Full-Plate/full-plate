@@ -22,18 +22,19 @@ nav {
  position: absolute;
  background: rgba(81, 103, 155, 0.5);
  height: 5px;
- width: 100%;
- left: -4px;
+ left: 0px;
  bottom: -3px;
  border-radius: 20px;
  opacity: 0;
  transition: 0.4s ease-out;
+ 
 }
 
 .navLinks a:hover::after {
   width: 100%;
   height: 5px;
   opacity: 1;
+
 }
 
 ul.navLinks {

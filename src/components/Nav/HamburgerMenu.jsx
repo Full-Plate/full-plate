@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import "../hamburgerMenu/HamburgerMenu.css"
+import "./HamburgerMenu.css"
 
 export default function HamburgerMenu() {
 const [close, setClose] = useState(false)
