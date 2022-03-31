@@ -2,18 +2,21 @@ import { useState } from "react";
 import Axios from "axios";
 import RecipeTile from "../components/RecipeTile";
 
+
+
 //styles
 import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
+import { AutoComplete } from "@syncfusion/ej2-react-dropdowns";
+import { route } from "browser-router";
 
 function Recipes() {
   const YOUR_APP_ID = "17d531d8";
   const YOUR_APP_KEY = "4250479211cf86c75ca61a0789ddd4f4";
   const [query, setQuery] = useState("");
-  const [healthLabel, setHealthLabel] = useState("vegetarian");
   const [recipes, setRecipes] = useState([]);
 
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&health=${healthLabel}`;
+  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
 
   const getRecipeInfo = async () => {
     var result = await Axios.get(url);
@@ -43,9 +46,14 @@ function Recipes() {
         <input type = "submit"
                value = "Get Recipe"
                className = "app__submit" />
+               
           }}
+          
         />
+        <AutoComplete {auto}/>
       </form>
+       <div>
+      </div>
       </div>
       </div>
       <div className="app__recipes">
