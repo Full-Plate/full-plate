@@ -8,7 +8,7 @@ import  cookingPot  from '../assets/cookingPot.svg';
 
 function Recipes() {
   const YOUR_APP_ID = "17d531d8";
-  const YOUR_APP_KEY = "66d53a0b7442d039bcecb26ca57dae58";
+  const YOUR_APP_KEY = "4250479211cf86c75ca61a0789ddd4f4";
   const [query, setQuery] = useState("");
   const [healthLabel, setHealthLabel] = useState("vegetarian");
   const [recipes, setRecipes] = useState([]);
