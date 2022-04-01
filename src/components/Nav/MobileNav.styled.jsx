@@ -14,7 +14,7 @@ div.navLinks {
  
   z-index: 10;
   text-align: center;
-  padding-top: 56px;
+  padding-top: 10px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -24,12 +24,12 @@ div.navLinks {
   box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
   border-radius: 0px 20px 20px 0px; */
   left: 0;
-  top: 115px;
   transition: transform 0.3s;
 }
 
 .linksContainerOne {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 
@@ -51,7 +51,6 @@ li.items {
 @media (max-width: 900px) {
   display: ${({ close }) => close ? 'flex': 'flex'};
   transform: ${({ close }) => close ? 'translateX(0)' : 'translateX(-100%)'};
-  flex-flow: column nowrap;
   position: fixed;
   width: 356px;
   height: 896px;
