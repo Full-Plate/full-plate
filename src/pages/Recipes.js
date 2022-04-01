@@ -16,7 +16,7 @@ function Recipes() {
   const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
 
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
+  const url = `https://api.spoonacular.com/recipes/complexSearch${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
 
   const getRecipeInfo = async () => {
     var result = await Axios.get(url);
@@ -50,7 +50,7 @@ function Recipes() {
           }}
           
         />
-        <AutoComplete {auto}/>
+        <AutoComplete/>
       </form>
        <div>
       </div>
