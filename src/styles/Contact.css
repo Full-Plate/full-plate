@@ -19,13 +19,11 @@
 }
 
 .card {
-  float:left;
   margin-top: -20%;
   margin-left: 30%;
-  width: 80%;
-  padding: 30px 90px 90px 90px;
+  width: 54%;
+  padding: 30px 90px 0px 90px;
   background: rgba(81, 103, 155, 0.5);
-  box-shadow: 10px 10px 0 rgba(81, 103, 155, 0.5);
   border-radius: 20px;
 }
 
@@ -57,8 +55,13 @@
   padding: 10px 0 10px 20px;
   border: 1px solid #667085;
   box-shadow: 2px 2px 0 #667085;
-  color: #ffffff;
+  color: #101828;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.card .row .form-group textarea {
+  height: 145px;
 }
 
 .card .row .form-group label {
@@ -80,10 +83,10 @@
 
 .card .row input[type="submit"] {
   border: 1px solid #667085;
-  box-shadow: 10px 10px 0 #667085;
-  padding: 10px;
-  height: 100%;
-  width: 50%;
+  box-shadow: 0px 3px 25px #667085;
+  padding: 15px, 62px, 15px, 62px;
+  width: 166px;
+  height: 54px;
   cursor: pointer;
   outline: none;
   background: #F9B686;;
@@ -93,6 +96,7 @@
   font-weight: 500;
   border-radius: 20px;
   transition: all 0.4s;
+  margin-top: 120px;
 }
 
 .card .row input[type="submit"]:hover {
@@ -114,7 +118,9 @@
     font-size: 34px;
   }
   
-  .card .row input[type="submit"] {
-    width: 100%;
-  }
+
 }
+
+
+
+

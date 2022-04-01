@@ -47,7 +47,7 @@ const [close, setClose] = useState(false)
         }>
       </div>
     </div>
-    <MobileNav close={close} />
+    <MobileNav close={close} setClose={setClose} />
     </>
   )
 }
