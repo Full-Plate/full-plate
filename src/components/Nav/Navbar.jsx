@@ -14,11 +14,13 @@ function Navbar() {
   };
   return (
     <>
+  
   <nav>  
     <HamburgerMenu />
     <div className="logo">
       <img src={Logo}/>
         </div >
+        
          < ul className ="navLinks">
            <li className="items"><Link to = "/" > Home </Link> </li>
               <li className = "items"><Link to = "/about" > About </Link> </li >

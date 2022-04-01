@@ -12,6 +12,7 @@ display: flex;
 
 .searchHeader{
   padding-left: 55px;
+  z-index: -1;
   
 }
 
@@ -53,4 +54,5 @@ transform-style: preserve-3d;
   position:relative;
   width: 250px;
   height: auto;
+  z-index: -1;
 }

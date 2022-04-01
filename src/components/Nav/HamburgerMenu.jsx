@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import "./HamburgerMenu.css"
+import MobileNav from './MobileNav'
 
 export default function HamburgerMenu() {
 const [close, setClose] = useState(false)
 
   return (
+    <>
+    
     <div className='burger' close={close} onClick={() => setClose(!close)} >
-
+    
       <div style={ 
         close ? 
         { backgroundColor:'', 
@@ -43,7 +46,8 @@ const [close, setClose] = useState(false)
         ,transformOrigin: '1px'}  
         }>
       </div>
-
     </div>
+    <MobileNav close={close} />
+    </>
   )
 }
