@@ -7,8 +7,7 @@ import team from "../assets/team.jpeg";
 import kristtelle from "../assets/kristtelle.png";
 import delight from "../assets/delight.png";
 import elleta from "../assets/elleta.png";
-import linkedin from "../assets/icons/linkedin.png"
-import mail from "../assets/icons/mail.png"
+
 
 import "../styles/About.css";
 
