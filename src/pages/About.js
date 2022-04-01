@@ -4,6 +4,8 @@ import React from "react";
 import maps from "../assets/maps.png";
 import search from "../assets/search.png";
 import team from "../assets/team.jpeg";
+import kristtelle from "../assets/kristtelle.png";
+import delight from "../assets/delight.png";
 
 import "../styles/About.css";
 
@@ -14,7 +16,7 @@ function About() {
     <h1 className="about-title">Here is how we can help!</h1>
       <div className="products-container">
         <div className="about-image">
-          <img src={search} alt="search-image" />
+          <img src={search} alt="search.png" />
             <p>At Full Plate, we curate meal ideas based on 
               what you already have on hand, so you can spend 
               your time and energy savoring rather than stressing.
@@ -30,13 +32,13 @@ function About() {
    < h2 className = "team-card" >Meet the Team!</h2>
       <div className="team-card-container">
         <div className="team-image-card">
-          <img src={team} alt="team-image" />
+          <img src={kristtelle} alt="kristtelle" />
             <p>Sharing is caring. Here is an alternative for your 
             unused ingredients so you can donate to hep your community.
           </p>
         </div>
          <div className="team-image-card">
-          <img src={team} alt="team-image" />
+          <img src={delight} alt="delight" />
             <p>Sharing is caring. Here is an alternative for your 
             unused ingredients so you can donate to hep your community.
           </p>
