@@ -13,8 +13,7 @@ function Navbar() {
       setOpenLinks(!openLinks);
   };
   return (
-    <>
-  
+  <>
   <nav>  
     <HamburgerMenu />
     <div className="logo">
