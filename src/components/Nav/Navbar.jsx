@@ -8,12 +8,9 @@ import "../../styles/Navbar.css";
 import HamburgerMenu from "./HamburgerMenu";
 
 function Navbar() {
-  const [openLinks, setOpenLinks] = useState(false);
-  const toggleNavbar = () => {
-      setOpenLinks(!openLinks);
-  };
+
   return (
-  <>
+    <>
   <nav>  
     <HamburgerMenu />
     <div className="logo">
