@@ -7,8 +7,9 @@ import IngredientSelector from "../components/IngredientSelector";
 //styles
 import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
-import { AutoComplete } from "@syncfusion/ej2-react-dropdowns";
-import { route } from "browser-router";
+import Suggestions from "react-tag-input/dist-modules/components/Suggestions";
+
+
 
 function Recipes() {
   const YOUR_APP_ID = "17d531d8";
@@ -49,7 +50,7 @@ function Recipes() {
                
           }}
           />
-        <IngredientSelector />
+        <IngredientSelector text={Suggestions}/>
       </form>
        <div>
       </div>

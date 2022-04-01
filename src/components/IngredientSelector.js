@@ -1,13 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function IngredientSelector(props){
+function IngredientSelector({text}){
     const name =props.auto;
     const YOUR_APP_ID = "17d531d8";
     const YOUR_APP_KEY = "4250479211cf86c75ca61a0789ddd4f4";
     const [ingredients, setIngredients] = useState([]);
     const [text, settext] = useState('');
     const [suggestions, setSuggestions] = useState([])
+    
 
 
     useEffect(() => {
