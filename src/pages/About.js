@@ -6,8 +6,11 @@ import search from "../assets/search.png";
 import team from "../assets/team.jpeg";
 import kristtelle from "../assets/kristtelle.png";
 import delight from "../assets/delight.png";
+<<<<<<< HEAD
 import elleta from "../assets/elleta.png";
 
+=======
+>>>>>>> 5286ea5e6b34c09109480e651ceb092bf714f945
 
 import "../styles/About.css";
 
@@ -35,18 +38,28 @@ function About() {
       <div className="team-card-container">
         <div className="team-image-card">
           <img src={kristtelle} alt="kristtelle" />
+<<<<<<< HEAD
            <div className="name">Kristelle</div> 
           <div className="jobTile">Product Manager</div>
           <div ClassName="contact-icons"></div>
             <p>Hi! I am kristtelle. At my current job, I work with customers inside and outside of the company to help them with their problems. I have enjoyed it so much that I decided to fully plunge into creating products that truly benefit customers. Food is a big part of my life, so we are excited to share Full Plate with everyone!
+=======
+            <p>Sharing is caring. Here is an alternative for your 
+            unused ingredients so you can donate to hep your community.
+>>>>>>> 5286ea5e6b34c09109480e651ceb092bf714f945
           </p>
         </div>
          <div className="team-image-card">
           <img src={delight} alt="delight" />
+<<<<<<< HEAD
            <div className="name">Delight</div> 
           <div className="jobTile">Product Designer</div>
           <div ClassName="contact-icons"></div>
             <p>Hi! I am Delight and I am delighted to meet you! Coming from a service background, there are 2 things in this world that excite me. Figuring out solutions to problems through experience design and food. What a better project to combine them, than Full Plate. 
+=======
+            <p>Sharing is caring. Here is an alternative for your 
+            unused ingredients so you can donate to hep your community.
+>>>>>>> 5286ea5e6b34c09109480e651ceb092bf714f945
           </p>
         </div>
          <div className="team-image-card">
