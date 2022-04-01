@@ -67,3 +67,6 @@
 textarea {
   resize: none;
 }
+.name .jobTitle{
+font-size: 18px;
+}
