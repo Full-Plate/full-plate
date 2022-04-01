@@ -5,6 +5,11 @@ import RecipeTile from "../components/RecipeTile";
 //styles
 import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
+<<<<<<< Updated upstream
+=======
+import { AutoComplete } from "@syncfusion/ej2-react-dropdowns";
+
+>>>>>>> Stashed changes
 
 function Recipes() {
   const YOUR_APP_ID = "17d531d8";
