@@ -20,7 +20,7 @@ function IngredientSelector(props){
 
  }, [])
     const onSuggestHandler = (text)=> {
-        setText(text);
+        settext(text);
         setSuggestions([]);
     }
 

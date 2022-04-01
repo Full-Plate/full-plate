@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Axios from "axios";
 import RecipeTile from "../components/RecipeTile";
-
+import IngredientSelector from "../components/IngredientSelector";
 
 
 //styles
@@ -48,9 +48,8 @@ function Recipes() {
                className = "app__submit" />
                
           }}
-          
-        />
-        <AutoComplete/>
+          />
+        <IngredientSelector />
       </form>
        <div>
       </div>
