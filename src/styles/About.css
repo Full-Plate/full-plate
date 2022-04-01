@@ -1,8 +1,6 @@
-
 .products-container {
   display: flex;
 }
-
 .about-title,
 .team-card{
   font-size:42px ;
@@ -29,66 +27,46 @@
 .about-image p{
   padding: 15px;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 25px;
-
 }
 
 /*teamImagescard*/
+
 .team-card-container{
   display:flex;
   flex-wrap: wrap;
-  justify-content: center;
-  
-  
-}
-
-.leftTeamContainer {
-  display: flex;
-  flex-flow: column wrap;
-  /* flex: 1 1 33%; */
-  align-items: center;
-  padding-bottom: 30px;
-
-}
-
-.rightTeamContainer {
-  display: flex;
-  flex-flow: column wrap;
-  /* flex: 5 1 33%; */
-  justify-content: flex-start;
-  padding: 23px 12px 28px 15px;
+  justify-content: space-between;
 }
 
 .team-image-card{
-  display: flex;
   border-radius : 20px;
   background: rgba(81, 103, 155, 0.5);
-  /* flex: 1 1 33%; */
-  margin:0px 9px 16px 0px;
-  width: 458px;
+  padding:20px;
+  flex: 33%;
+  margin:10px;
+
 }
 
 .team-image-card img{
-  margin:19px;
+  float: left;
+  margin:20px;
   width: 150px;
   height:150px;
-  border-radius : 80px;
+  border-radius : 20px;
   
   
 }
 
-.rightTeamContainer p{
+.team-image p{
   font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-  
+  font-size: 18px;
+  line-height: 25px;
 }
 
 textarea {
   resize: none;
 }
-.leftTeamContainer h3{
-font-size: 1.8rem;
-
+.name .jobTitle{
+font-size: 18px;
 }
