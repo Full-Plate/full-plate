@@ -4,9 +4,10 @@
 }
 
 nav {
- position: relative;
- justify-content: center;
+position: relative;
  display:flex;
+ justify-content: flex-start;
+ align-items: center;
  height: 115px;
  background: #FEFEFE;
  filter: drop-shadow(0px 3px 25px rgba(102, 112, 133, 0.25));
@@ -60,15 +61,9 @@ ul.navLinks {
 }
 
 .logo{
-  position: absolute;
-  top: 17.39%;
-  left: 4.24%;
-  right: 85.35%;
-  bottom: 18.26%;
-  display: flex;
   width: 141px;
   height: 70px;
-  
+  margin-left: 61px;
   }
 
   .MenuIcon{
@@ -103,12 +98,16 @@ ul.navLinks {
 
   @media screen and (max-width: 896px) {
 
+    nav {
+      justify-content: center;
+    }
+
     ul.navLinks {
       display: none;
     }
     
     .logo {
-      position: relative;
+     margin-left: 0;
     }
   }
 

@@ -12,11 +12,9 @@ function Navbar() {
   return (
     <>
   <nav>  
+    <img className="logo" src={Logo}/>
+    {/* <img className="mobileLogo" src={Logo}/> */}
     <HamburgerMenu />
-    <div className="logo">
-      <img src={Logo}/>
-        </div >
-        
          < ul className ="navLinks">
            <li className="items"><Link to = "/" > Home </Link> </li>
               <li className = "items"><Link to = "/about" > About </Link> </li >

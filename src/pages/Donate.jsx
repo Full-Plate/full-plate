@@ -9,10 +9,11 @@ import citymap from '../assets/citymap.png';
 
 export default function Donate() {
   return (
+    <div className="wrapper">
     <div className="donateContainer">
       <h1 className="donate-header">Why Donate?</h1>
        <div className="donate-text">
-         <p className= "donate-text"> On average, we throw away <strong>103</strong> pounds of food
+         <p> On average, we throw away <strong>103</strong> pounds of food
           each year. <strong>103</strong> pounds is about a <stong>MONTH</stong> of meals for another person </p>
           <p className = "donate-text" > Be it Suggestions, feedback, business opportunities or
              even how our recipes made you hungry, we would love to hear from you!</p>
@@ -23,6 +24,7 @@ export default function Donate() {
               <h2>Find your nearest fridge below?</h2>
               <img className="citymapimg" src={citymap} alt="cityfridgemap" />
               <img className="fridgesearchimg" src={fridgesearch} alt="cityfridgesearchplaceholder" />
+      </div>
       </div>
   )
 }

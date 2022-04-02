@@ -10,7 +10,10 @@ function Home() {
   return (
    <>
    < div className = "headerContainer" >
-    <div className="banner" style={{ backgroundImage: `url(${BannerImage})` }}></div>
+    <div className="banner" style={{ backgroundImage: `url(${BannerImage})` }}>
+      
+    </div>
+    <div className="wrapper">
       <div className="homePageTextContainer">
         <div class="row1">
           <div class="column1">
@@ -28,6 +31,7 @@ function Home() {
             </div>
         </div>
       </div>
+     </div>
      </div>
       </>
   );
