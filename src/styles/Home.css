@@ -3,13 +3,13 @@
 }
 .banner{
   position: absolute; 
-  top: 200px;
+  top:300px;
   left: 0; 
   right: 0; 
-  bottom: 0; 
+  bottom: 100px; 
   margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
+  min-width: 20%;
+  min-height: 20%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -17,7 +17,7 @@
 .column1 {
   float: left;
   width: 50%;
-  margin-top:33.1%;
+  margin-top:26%;
   padding-right: 30px;
 }
 .column2 {
@@ -51,6 +51,7 @@
 }
 .headerContainer button{
   font-family: 'Montserrat', sans-serif;
+  margin-top: 25px;
   color: #101828;
   font-weight: 400;
   font-size: 18px;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BannerImage from "../assets/Background.svg";
+import BannerImage from "../assets/banner.png";
 import "../styles/Home.css"; 
 
 import homefood  from "../assets/homefood.png";
