@@ -18,6 +18,7 @@ import "../styles/About.css";
 function About() {
   return (
   <>
+  <div className="wrapper">
     <h1 className="about-title">Here is how we can help!</h1>
       <div className="products-container">
         <div className="about-image">
@@ -33,7 +34,9 @@ function About() {
             unused ingredients so you can donate to hep your community.
           </p>
         </div>
+        </div>
   </div>
+  <div className="wrapper">
    < h2 className = "team-card" >Meet the Team!</h2>
       
       <div className="team-card-container">
@@ -91,7 +94,8 @@ function About() {
           </div>
             
         </div>
-     </div> 
+      </div> 
+     </div> {/* End of wrapper div #2 */}
  </>
   );
   }

@@ -5,16 +5,17 @@ import "../styles/Contact.css";
 function Contact() {
   return (
     <>
+    <div className="wrapper">
+       <h1 className="contact-header">We would love to hear from you</h1>
     <div className="contact-container">
-       <h1 className="contact-header">We would love to hear from you!</h1>
-       </div>
-       <div>
-         <p className= "contact-text"> Got Something you can not wait to share with us </p>
-          <p className = "contact-text" > Be it Suggestions, feedback, business opportunities or
+       
+       <div className="left-contact-container">
+         <p className= "contact-text"> Got Something you can not wait to share with us </p> 
+         <br />
+         <p className = "contact-text" > Be it Suggestions, feedback, business opportunities or
              even how our recipes made you hungry, we would love to hear from you!</p>
-             </div>
+        </div>
      <div className="card">
-  <h2>Contact Us</h2>
   <div className="row">
     <div className="col">
       <div className="form-group">
@@ -41,6 +42,8 @@ function Contact() {
     </div>
   </div>
 </div> 
+</div>
+</div>
     </>
   );
 }
