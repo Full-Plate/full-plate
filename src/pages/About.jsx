@@ -5,7 +5,6 @@ import { LinkedIn } from "@mui/icons-material";
 //images
 import maps from "../assets/maps.png";
 import search from "../assets/search.png";
-import team from "../assets/team.jpeg";
 import kristtelle from "../assets/kristtelle.png";
 import delight from "../assets/delight.png";
 import elleta from "../assets/elleta.png";
@@ -79,7 +78,7 @@ function About() {
          <div className="team-image-card">
 
            <div className="leftTeamContainer">
-          <img src={team} alt="team-image" />
+          <img src={kristtelle} alt="team-image" />
            <h3 className="name">Sean</h3> 
           <h3>Software Developer</h3>
           <ul>
@@ -89,7 +88,7 @@ function About() {
           </ul>
           </div>
           <div className="rightTeamContainer">
-          <p>Hi! Im Sean .. I have no opinions.
+          <p>Hi! Im Sean. A Front-end Web Developer based out of Markham, Ontario, with a diverse background as an Electrician, English teacher abroad in Japan, and Property Management. As a Juno College Web Development Immersive Bootcamp grad, I learned to turn my passions towards creating meaningful websites and web applications by tapping into my creative side.
           </p>
           </div>
             
