@@ -33,10 +33,16 @@
 }
 
  .orginfo-image{
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   text-align: center;
   width: 50%;
   margin: 30px;
  }
+
+ .orginfo-image img{
+  width: 100%;
+}
 
 
 .donatebutton{
