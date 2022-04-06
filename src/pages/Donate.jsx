@@ -1,10 +1,6 @@
-import React from 'react'
-
-
 import "../styles/Donate.css";
 
 import orginfo from '../assets/orginfo.png';
-import fridgesearch from '../assets/fridgesearch.png';
 import citymap from '../assets/citymap.png';
 
 export default function Donate() {
@@ -18,12 +14,16 @@ export default function Donate() {
           <p className = "donate-text" > Be it Suggestions, feedback, business opportunities or
              even how our recipes made you hungry, we would love to hear from you!</p>
              </div> 
+             <div className="orginfo">
              < div className = "orginfoimg">
               <img src={orginfo} alt="cityfridgephoto" />
               </div>
-              <h2>Find your nearest fridge below?</h2>
-              <img className="citymapimg" src={citymap} alt="cityfridgemap" />
-              <img className="fridgesearchimg" src={fridgesearch} alt="cityfridgesearchplaceholder" />
+              <h2 className="donatepageh2">Find your nearest fridge below?</h2>
+              
+              <img className="citymaping" src={citymap} alt="cityfridgemap" />
+              <button className="mapbutton" onClick={() => window.open("https://nycfridge.com/")}> Take me there now</button>
+              </div>
+           
       </div>
       </div>
   )
