@@ -19,16 +19,19 @@ export default function Donate() {
              </div>
               </div>
             <div className="wrapper">
-           <h1 className="otginfo">Find your nearest fridge today!</h1>
-             < div className = "orginfo-container">
-              <img src={counter} alt="cityfridgephoto" />
+              <h1 className="oginfo">Find your nearest fridge today!</h1>
+               <div className = "orginfo-container">
+                 <p className = "donate-text-2" > Current NYC Fridge Count</p>
+                   <div className ="orginfo-image">
+                    <img src={counter} alt="cityfridgephoto" />
+                      <button className="donatebutton" onClick={() => window.open("https://nycfridge.com/")}> Take me there now</button>
+                   </div>
+                </div>
+               <div className ="orginfo-image">
+                    <img className="fridge" src={fridge} alt="cityfridgeimage" />
               </div>
-              <h2 className="donatepageh2">Find your nearest fridge today!</h2>
-              <p className = "donate-text-2" > Current NYC Fridge Count</p>
-              <img className="fridge" src={fridge} alt="cityfridgeimage" />
-              <button className="mapbutton" onClick={() => window.open("https://nycfridge.com/")}> Take me there now</button>
-              </div>
-           </div>
-    </div>
+            </div>
+          </div>
+      </div>
   )
 }
