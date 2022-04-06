@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.orginfo{
+.donate-header{
   display: flex;
   margin-top: 42px;
   font-size: 2.5rem;
@@ -10,39 +10,37 @@
   line-height: 34px;
   padding-bottom: 2rem;
 }
-
-
-.donate-text p {
-  padding: 15px;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 25px;
-}
-
-.donate-text-2{
-  font-size: 2.3rem;
-}
-
-
-.cityfridgeimage img{
+.nyccomfridgeimage img{
   width: 95%;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
 
 }
+.donateinfo-text p {
+  padding: 15px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 25px;
+}
 
- .orginfo-image{
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  text-align: center;
-  width: 50%;
-  margin: 30px;
+.fridgecount-text{  
+  font-size: 2.3rem;
+}
+
+
+.orglink-container{
+display:flex;
+
+}
+
+.counter-image{
+
+ 
  }
 
- .orginfo-image img{
-  width: 100%;
-}
+ .fridge-image{
+ }
 
 
 .donatebutton{
