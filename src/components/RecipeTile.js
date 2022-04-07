@@ -3,16 +3,16 @@ import { useState } from "react";
 
 
 //component
-import Modal from "../components/modal/Modal";
+import {Modal} from "../components/modal/Modal";
 
 import "../styles/RecipeTile.css";
 
 
 
 
-function RecipeTile({recipe, Modal}) {
-   const [showModal, setShowModal] = useState(false)
-
+function RecipeTile({recipe}) {
+  const [showModal, setShowModal] = useState(false)
+ 
   const openModal = () => {
      setShowModal(prev => !prev)
  }
@@ -24,7 +24,7 @@ function RecipeTile({recipe, Modal}) {
               src = {recipe.recipe.image}
               alt = {recipe.recipe.label}
               onClick = {openModal}/> 
-              <Modal showModal={showModal} setShowModal={setShowModal} />
+              <Modal recipe={recipe} showModal={showModal} setShowModal={setShowModal} />
         <div className = "tile-card-body" >
           <h2 className = "tile-card-title " >
             <p> {recipe.recipe.label} </p> 
