@@ -1,38 +1,44 @@
-.HeaderContainer{
+.mainHomeContainer{
   display: flex;
   width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
 }
 .banner{
-  position: absolute; 
+  position:absolute;
+  /* margin-top: 220px ; */
   width: 100%;
   height: 378px;
+  left: 0px;
   top: 335px;
+  background: rgba(81, 103, 155, 0.3);
   z-index: -1;
 }
-.column1 {
-  float: left;
-  width: 50%;
-  margin-top:26%;
-  padding-right: 30px;
+.leftHomeContainer {
+  width: 411px;
+  height: 229px;
+  
 }
-.column2 {
-  float: left;
-  width: 50%;
+
+.homePageTextContainer {
+  margin-right: 32px ;
+  margin-top: 244px;
+  
+}
+
+.rightHomeContainer {
+  
+  width: 855px;
   margin-top: 10%;
   padding-right: 15px;
 }
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.homefood{
-  margin-top: 35px;
-  width: 855px;
-  height: 481px;
 
 
+img.homefood{
+margin-top: 30px;
+width: 855px;
+height: 481px;
 }
 
 
@@ -48,12 +54,12 @@
   line-height: 25px;
   
 }
-.headerContainer button{
+.mainHomeContainer button{
   font-family: 'Montserrat', sans-serif;
   margin-top: 25px;
   color: #101828;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 2.0rem;
   line-height: 25px;
   background-color: #F9B686;
   border: 1px #F9B686;
@@ -62,11 +68,89 @@
   height: 54px;
   width: 166px;
   cursor: pointer;
+  transition: ease-out 300ms;
 }
-.headerContainer button:hover {
+.mainHomeContainer button:hover {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f1b587;
+  background-color: rgba(81, 103, 155, 0.3);
   cursor: pointer;
   transition: 0.3s ease-in;
 }
 
+@media screen and (max-width: 1336px) {
+
+  .banner{
+    height: 130px;
+    top: 220px;
+  }
+
+  h1.hometitle {
+    margin-top: 30px;
+  }
+
+
+  .mainHomeContainer{
+    flex-direction: column-reverse;
+    align-items: center;  
+    margin-top: 84px;  
+  }
+  
+  img.homefood{
+
+    margin: 0 auto;
+    width: 294px;
+    height: 100%;
+  }
+
+  .homePageTextContainer {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .leftHomeContainer {
+    margin: 0 auto;
+    width: 388px;
+    text-align: center;
+  }
+
+  .rightHomeContainer {
+    margin: 0 auto;
+    padding: 0;
+    width: 294px;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 427px) {
+
+.leftHomeContainer, .rightHomeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1.hometitle{
+  font-size: 2.4rem;
+}
+
+p.discritpion{
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 25px;
+}
+
+}
+
+@media screen and (max-width: 280px) {
+
+img.homefood{
+  width: 220px;
+}
+
+.banner {
+  height: 85px;
+  top: 220px;
+}
+
+}
