@@ -9,7 +9,6 @@ import "../styles/RecipeTile.css";
 
 
 
-
 function RecipeTile({recipe}) {
   const [showModal, setShowModal] = useState(false)
  
