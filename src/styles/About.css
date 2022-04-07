@@ -1,28 +1,30 @@
 
 .products-container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.about-title,
-.team-card{
+h1.about-title,
+h2.team-card{
   font-size:42px ;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 46px;
   margin-top: 59px;
   line-height: 51px;
-  
+  margin-left: 130px;
 }
 
  .about-image {
-  text-align: center;
   background: rgba(250, 193, 107, 0.5);
-  width: 50%;
-  margin: 30px;
+  width: 456px;
   border-radius : 20px;
   border: 1px solid rgba(250, 193, 107, 0.5);
+  margin:0px 9px 16px 0px;
 }
 .about-image img{
   width: 100%;
+  
 }
 
 .about-image p{
@@ -48,6 +50,8 @@
   /* flex: 1 1 33%; */
   align-items: center;
   padding-bottom: 30px;
+  margin-left: 5px;
+  
 
 }
 
@@ -57,6 +61,7 @@
   /* flex: 5 1 33%; */
   justify-content: flex-start;
   padding: 23px 12px 28px 15px;
+  
 }
 
 .team-image-card{
@@ -68,7 +73,7 @@
   width: 458px;
 }
 
-.team-image-card img{
+img.headshot{
   margin:19px;
   width: 150px;
   height:150px;
@@ -76,6 +81,43 @@
   
   
 }
+
+img.icon {
+  width: 25px;
+  height: 23.75px;
+  margin-left: 21.5px;
+  /* padding-bottom: 1px; */
+  
+}
+
+.social li{
+  margin-bottom: 20.5px;
+  display: flex;
+}
+
+ul.social {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.leftTeamContainer li span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #101828;
+  margin-left: 13.5px;
+  
+}
+
+.leftTeamContainer li a{
+  text-decoration: none;
+  display: flex;
+}
+
 
 .rightTeamContainer p{
   font-weight: 400;
@@ -90,4 +132,12 @@ textarea {
 .leftTeamContainer h3{
 font-size: 1.8rem;
 
+}
+
+h3.name{
+  
+}
+
+h3.role{
+  margin-bottom: 29px;
 }

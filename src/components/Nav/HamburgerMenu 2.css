@@ -1,0 +1,29 @@
+.burger {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  display: none;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  cursor: pointer;
+
+}
+
+.burger div {
+  width: 24px;
+  height: 4px;
+  background-color: #333 ;
+  border-radius: 30px;
+  transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 896px) {
+
+  .burger {
+    display: flex;
+    align-items: center;
+  }
+}
+
