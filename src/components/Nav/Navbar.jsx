@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <>
   <nav>  
-    <img className="logo" src={Logo}/>
+    <img className="logo" src={Logo} ></img>
     {/* <img className="mobileLogo" src={Logo}/> */}
     <HamburgerMenu />
          < ul className ="navLinks">
