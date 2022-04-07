@@ -63,7 +63,7 @@ const CloseModalButton = styled(MdClose)`
   z-index: 10;
 `;
 
-export const Modal = ({ recipe, showModal, setShowModal }) => {
+export const Modal = ({showModal, setShowModal }) => {
   const modalRef = useRef();
 
 
@@ -105,12 +105,11 @@ export const Modal = ({ recipe, showModal, setShowModal }) => {
         <Background onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}>
             <ModalWrapper showModal={showModal}>
-              <ModalImg src={recipe.recipe.image}
-               alt='recipeimage' />
+              
               <ModalContent>
-                <h1>Are you ready?</h1>
-                <p>Get exclusive access to our next launch.</p>
-                <button>Join Now</button>
+                <h1>Recipe Name?</h1>
+                <h2>Ingredients</h2>
+                <p>Instructions</p>
               </ModalContent>
               <CloseModalButton
                 aria-label='Close modal'
