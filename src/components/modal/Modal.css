@@ -1,6 +1,8 @@
 .Background {
-  width: 80%;
-  height: 80%;
+  background: rgba(102, 112, 133, 0.25);
+  backdrop-filter: blur(2px);
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +33,7 @@
   width: 100%;
   border-radius: 20px 0 0 20px;
   background: #FFDBA4;
+  
 }
  
 
@@ -43,9 +46,8 @@
   color: #141414;
 }
 
-  .ModalContent p {
-    margin: 1rem, 1rem, 2rem, 2rem;
-    
+.ModalContent h2 {
+  margin: 10px 50px 20px;
   }
 
 
@@ -59,3 +61,15 @@
   padding: 0;
   z-index: 10;
 }
+
+.EmailIcon{
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  z-index: 10;
+}
+

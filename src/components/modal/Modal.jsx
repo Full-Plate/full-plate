@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { MdClose } from 'react-icons/md';
+import { MdOutlineMail} from 'react-icons/md';
 
 import "./Modal.css"
 
@@ -39,9 +40,11 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
     [keyPress]
   );
 
+
   return (
     <>
       {showModal ? (
+     
       <div className="Background" onClick={closeModal} ref={modalRef}>
          <animated.div style={animation}>
             <div className="ModalWrapper" showModal={showModal}>
@@ -50,14 +53,18 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
               <div className= "ModalContent">
                 <h1>{recipe.recipe.label}</h1>
                 <h2>{recipe.recipe.ingredientLines}</h2>
+               
                 <p>Instructions</p>
+                  <MdOutlineMail className="EmailIcon" />
               </div>
               <MdClose className = "CloseModalButton"
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
+          
            </animated.div>
            </div>
+           
       ) : null}
     </>
   );
