@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
-
+import { MdClose } from 'react-icons/md';
 
 import "./Modal.css"
 
@@ -52,7 +52,7 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
                 <h2>{recipe.recipe.ingredientLines}</h2>
                 <p>Instructions</p>
               </div>
-              <div className = "CloseModalButton"
+              <MdClose className = "CloseModalButton"
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
