@@ -141,3 +141,44 @@ h3.name{
 h3.role{
   margin-bottom: 29px;
 }
+
+@media screen and (max-width: 1350px) {
+  h1.about-title,
+  h2.team-card {
+  margin-left: 0;
+  text-align: center;
+}  
+
+}
+
+@media screen and (max-width: 1038px) {
+
+
+.about-image, .team-image-card {
+  width: 700px;
+}
+
+.rightTeamContainer {
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px){
+  
+  .team-image-card {
+    flex-direction: column;
+  }
+
+  ul.social {
+    flex-direction: column;
+    align-content: center;
+  }
+
+
+  .leftTeamContainer {
+    padding-bottom: 0px;
+  }
+
+
+}
+
+}
