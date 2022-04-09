@@ -67,6 +67,7 @@
   width: 924px;
   margin: 0 auto;
   margin-top: 120px;
+  margin-bottom: 248px;
 }
 
 .orglink-container h2{
@@ -136,7 +137,7 @@
 
  .fridgeImage img {
    margin-top: 35px;
-   margin-bottom: 35px;
+  
  }
 
  @media screen and (max-width:765px) {
