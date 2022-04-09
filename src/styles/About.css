@@ -123,15 +123,14 @@ ul.social {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.5rem;
-  
 }
 
 textarea {
   resize: none;
 }
 .leftTeamContainer h3{
-font-size: 1.8rem;
-
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 h3.name{
