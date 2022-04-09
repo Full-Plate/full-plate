@@ -101,7 +101,7 @@ function About() {
           </ul>
           </div>
             <div className="rightTeamContainer">
-            < p > Hi! I am Elleta. I am a Front - end Software Developer with 1 - year of experience who is adept in bringing forth expertise in the design, installation, testing, and maintenance of software systems. I am proficient in various platforms, languages, and embedded systems.Experienced with the latest cutting - edge development tools and procedures. Able to effectively self - manage during independent projects, as well as collaborate as part of a productive team.I am an active and curious individual with a passion for learning and self-improvement.
+            < p > Hi! I am Elleta. I am a Frontend Software Developer who is adept in bringing forth expertise in the design, installation, testing, and maintenance of software systems. I am an active and curious individual with a passion for learning and self-improvement. Creating full plate has been a great learning experience for me. 
           </p>
           </div>
         </div>

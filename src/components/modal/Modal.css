@@ -6,12 +6,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* transform: translate(-50%, -50%); */
 }
- 
 
 .ModalWrapper{
   width: 100rem;
@@ -24,18 +25,13 @@
   position: relative;
   z-index: 10;
   border-radius:20px;
-  
 }
-  
-
 
 .recipe-image {
   width: 100%;
   border-radius: 20px 0 0 20px;
   background: #FFDBA4;
-  
 }
- 
 
 .ModalContent {
   display: flex;
@@ -49,7 +45,6 @@
 .ModalContent h2 {
   margin: 10px 50px 20px;
   }
-
 
 .CloseModalButton {
   cursor: pointer;
@@ -73,3 +68,11 @@
   z-index: 10;
 }
 
+.RecipeIngList{
+  list-style: none;
+}
+
+.cookingTime
+{
+  
+}

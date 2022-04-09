@@ -21,7 +21,7 @@ export default function Donate() {
           <h2>Find your nearest fridge today!</h2>
           <p className = "fridgecount-text" > Current NYC Fridge Count</p>
           <img src={counter} alt="cityfridgephoto" />
-          <button className="donatebutton" onClick={() => window.open("httpnycfridge.com/")}> Take me there now</button>
+          <button className="donatebutton" onClick={() => window.open("https://nycfridge.com/")}> Take me there now</button>
         </div>
         <div className ="fridgeImage">
          <img className="fridge" src={fridge} alt="cityfridgeimage"/>

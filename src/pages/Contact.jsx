@@ -1,6 +1,11 @@
+import { Send } from "@mui/icons-material";
 import React from "react";
 
 import "../styles/Contact.css";
+
+
+
+
 
 function Contact() {
   return (
@@ -38,7 +43,7 @@ function Contact() {
     </div>
 
     <div className="col">
-      <input type="submit" value="Send" />
+      <input type="submit" href="mailto:fullplate2022@gmail.com" value="Send"/>
     </div>
   </div>
 </div> 
