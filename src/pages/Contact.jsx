@@ -2,6 +2,12 @@ import React from "react";
 
 import "../styles/Contact.css";
 
+const onClickMailtoHandler = () => {
+    //TODO: open default e-mail client e.g. via mailto link with text from (state) variable as body
+}
+
+
+
 function Contact() {
   return (
     <>
@@ -38,7 +44,7 @@ function Contact() {
     </div>
 
     <div className="col">
-      <input type="submit" value="Send" />
+      <input type="submit" onClick={onClickMailtoHandler} value="Send" href="malito:fullplate2022@gmail.com"/>
     </div>
   </div>
 </div> 

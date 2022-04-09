@@ -52,10 +52,17 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
               src = {recipe.recipe.image}></img>
               <div className= "ModalContent">
                 <h1>{recipe.recipe.label}</h1>
-                <h2>{recipe.recipe.ingredientLines}</h2>
-               
-                <p>Instructions</p>
+                <h2>Ingredients</h2>
+                <ul className="RecipeIngList">
+                <li>{recipe.recipe.ingredientLines[1]}</li>
+                 <li>{recipe.recipe.ingredientLines[2]}</li>
+                 <li>{recipe.recipe.ingredientLines[3]}</li>
+                 <li>{recipe.recipe.ingredientLines[4]}</li>
+                 <li>{recipe.recipe.ingredientLines[5]}</li>
+                 </ul>
+                <h3 className="cookingTime"> {recipe.recipe.totalTime} Mins </h3> 
                   <MdOutlineMail className="EmailIcon" />
+      
               </div>
               <MdClose className = "CloseModalButton"
                 aria-label='Close modal'
