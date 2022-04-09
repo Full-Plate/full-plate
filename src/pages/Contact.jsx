@@ -43,7 +43,7 @@ function Contact() {
     </div>
 
     <div className="col">
-      <input type="submit" href="mailto:elletamc@gmail.com" value="Send"/>
+      <input type="submit" href="mailto:fullplate2022@gmail.com" value="Send"/>
     </div>
   </div>
 </div> 
