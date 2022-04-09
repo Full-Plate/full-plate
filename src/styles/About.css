@@ -12,7 +12,7 @@ h2.team-card{
   margin-bottom: 46px;
   margin-top: 59px;
   line-height: 51px;
-  margin-left: 130px;
+  margin-left: 50px;
 }
 
  .about-image {
@@ -143,15 +143,17 @@ h3.role{
 }
 
 @media screen and (max-width: 1350px) {
+ 
+
+}
+
+@media screen and (max-width: 1217px) {
+
   h1.about-title,
   h2.team-card {
   margin-left: 0;
   text-align: center;
 }  
-
-}
-
-@media screen and (max-width: 1038px) {
 
 
 .about-image, .team-image-card {
@@ -161,6 +163,19 @@ h3.role{
 .rightTeamContainer {
   justify-content: center;
 }
+
+}
+
+/* @media screen and (max-width: 1038px) {
+
+
+.about-image, .team-image-card {
+  width: 700px;
+}
+
+.rightTeamContainer {
+  justify-content: center;
+} */
 
 @media screen and (max-width: 700px){
   
@@ -178,7 +193,5 @@ h3.role{
     padding-bottom: 0px;
   }
 
-
-}
 
 }
