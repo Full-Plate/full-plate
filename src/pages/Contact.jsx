@@ -1,10 +1,9 @@
+import { Send } from "@mui/icons-material";
 import React from "react";
 
 import "../styles/Contact.css";
 
-const onClickMailtoHandler = () => {
-    //TODO: open default e-mail client e.g. via mailto link with text from (state) variable as body
-}
+
 
 
 
@@ -44,7 +43,7 @@ function Contact() {
     </div>
 
     <div className="col">
-      <input type="submit" onClick={onClickMailtoHandler} value="Send" href="malito:fullplate2022@gmail.com"/>
+      <input type="submit" href="mailto:elletamc@gmail.com" value="Send"/>
     </div>
   </div>
 </div> 
