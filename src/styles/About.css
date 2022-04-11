@@ -12,12 +12,12 @@ h2.team-card{
   margin-bottom: 46px;
   margin-top: 59px;
   line-height: 51px;
-  margin-left: 130px;
+  margin-left: 50px;
 }
 
  .about-image {
   background: rgba(250, 193, 107, 0.5);
-  width: 456px;
+  width: 539px;
   border-radius : 20px;
   border: 1px solid rgba(250, 193, 107, 0.5);
   margin:0px 9px 16px 0px;
@@ -40,6 +40,7 @@ h2.team-card{
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 150px;
   
   
 }
@@ -70,7 +71,7 @@ h2.team-card{
   background: rgba(81, 103, 155, 0.5);
   /* flex: 1 1 33%; */
   margin:0px 9px 16px 0px;
-  width: 458px;
+  width: 539px;
 }
 
 img.headshot{
@@ -123,15 +124,14 @@ ul.social {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.5rem;
-  
 }
 
 textarea {
   resize: none;
 }
 .leftTeamContainer h3{
-font-size: 1.8rem;
-
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 h3.name{
@@ -143,15 +143,17 @@ h3.role{
 }
 
 @media screen and (max-width: 1350px) {
+ 
+
+}
+
+@media screen and (max-width: 1217px) {
+
   h1.about-title,
   h2.team-card {
   margin-left: 0;
   text-align: center;
 }  
-
-}
-
-@media screen and (max-width: 1038px) {
 
 
 .about-image, .team-image-card {
@@ -161,6 +163,19 @@ h3.role{
 .rightTeamContainer {
   justify-content: center;
 }
+
+}
+
+/* @media screen and (max-width: 1038px) {
+
+
+.about-image, .team-image-card {
+  width: 700px;
+}
+
+.rightTeamContainer {
+  justify-content: center;
+} */
 
 @media screen and (max-width: 700px){
   
@@ -178,7 +193,5 @@ h3.role{
     padding-bottom: 0px;
   }
 
-
-}
 
 }

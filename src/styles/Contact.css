@@ -2,9 +2,7 @@
   margin: 0;
   padding: 0;
   padding-left: 110px;
-
 }
-
 
 .contact-container {
   display: flex;
@@ -36,115 +34,126 @@
 
 .card {
   min-width: 576px;
+  height: 520px;
   padding: 20px 35px 0px 35px;
   background: rgba(81, 103, 155, 0.5);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 210px;
 }
 
-
-
-.card .row .col {
-  
-  
-  margin: 30px 20px 40px 0;
-  transition: 0.5s;
-}
-
-.card .row .form-group {
-  
-  
-  height: 40px;
-}
-
-.card .row .form-group input,
-.card .row .form-group textarea {
-  
-  width: 100%;
-  height: 100%;
-  outline: none;
-  font-size: 2.4rem;
-  border: 1px solid #667085;
-  box-shadow: 2px 2px 0 #667085;
-  color: #101828;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.card .row .form-group textarea {
-  height: 145px;
-}
-
-.card .row .form-group label {
+.card label {
+  margin-bottom: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
   line-height: 29px;
   color: #101828;
-  font-size: 2.4rem;
-  margin-bottom: 5px;
-  display: block;
-  pointer-events: none;
- 
 }
 
-
-
-.card .row .form-group input:focus,
-.card .row .form-group textarea:focus {
-  border: 5px solid #ffffff;
-  transition: all 0.5s;
+.card label:nth-child(2){
+display: ;
 }
 
-.card .row input[type="submit"] {
+.card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card input {
+  background: #FEFEFE;
   border: 1px solid #667085;
-  box-shadow: 0px 3px 25px #667085;
-  padding: 15px, 62px, 15px, 62px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  height: 4.2rem;
+  margin-bottom: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding-left: 20px;
+}
+
+.card textarea {
+  height: 145px;
+  background: #FEFEFE;
+  border: 1px solid #667085; box-sizing: border-box;border-radius: 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding: 20px;
+}
+
+.card button {
   width: 166px;
   height: 54px;
-  cursor: pointer;
-  outline: none;
-  background: #F9B686;;
-  color: #101828;
-  line-height: 24px;
-  font-size: 20px;
-  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #F9B686;
+  box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
   border-radius: 20px;
-  transition: all 0.4s;
-  margin-top: 120px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #101828;
+  text-transform: capitalize;
 }
 
-.card .row input[type="submit"]:hover {
-  border: 5px solid rgba(255, 255, 255, 1);
-  color: #ffffff;
-  transition: all 0.4s;
-}
 
 @media screen and (max-width: 1069px) {
 .left-contact-container {
   margin-bottom: 100px;
-  margin-right: 0;
+  margin-right: 50px;
 }
-.contact-header {
-  padding-left: 0;
-}
+  h1.contact-header{
+    margin: 0 auto;
+  }
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 946px) {
   
-  
-  .card h2 {
-    font-size: 34px;
+  .left-contact-container {
+    width: 100%;
+    align-items: center;  
+    margin-right: 0px;
+  }
+
+  .contact-header {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  p.contact-text{
+    max-width: 70%;
   }
   
+}
+
+@media screen and (max-width: 891px) { 
+
+  h1.contact-header{
+    text-align: center;
+  }
+
 
 }
+
 
 @media screen and (max-width: 629px) {
 .card {
-  min-width: 125px;
+  min-width: 100%;
+  height: 100%;
 }
 
 input, textarea {
-
-  width: 300px;
+  width: 100%;
 }
 
 
