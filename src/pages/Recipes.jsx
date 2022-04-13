@@ -20,14 +20,16 @@ function Recipes() {
   }
 
   const getRecipes = () => {
+     console.log(getRecipes)
     fetch(
    `https://api.spoonacular.com/recipes/complexSearch?apiKey=8852827ae2294be48706dc188cc2232c&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&tags=true&maxReadyTime=${time}`
     )
+    
 
    .then((response) => response.json())
       .then((data) => {
         setRecipes(data.results);
-        console.log(recipes)
+        
       })
       .catch((error) => {
         console.log(error);
