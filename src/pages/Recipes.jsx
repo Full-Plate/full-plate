@@ -9,7 +9,7 @@ import  cookingPot  from '../assets/cookingPot.svg';
 
 const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
-export default function SearchBar() {
+export default function Recipes() {
   const [recipes, setRecipes] = useState([]);
 
   const {query, setQuery, time} = useContext(
@@ -24,9 +24,11 @@ export default function SearchBar() {
     fetchRecipes();
   }, []);
 
-  function search(event) {
-    event.preventDefault();
-  }
+  const onSubmit = (e) => {
+    e.preventDefault(); //this will prevent page from reloading.
+    fetchRecipes();
+   
+  };
 
   function handleQueryChange(event) {
     setQuery(event.target.value);
@@ -40,6 +42,7 @@ export default function SearchBar() {
       .then((data) => {
         setRecipes(data.results);
       })
+      
       .catch((error) => {
         console.log(error);
       });
@@ -52,7 +55,7 @@ export default function SearchBar() {
         <img className="cookingpot" src={cookingPot} alt="icon" />
         <div className="searchHeader">
           <h1 className="pageTitle">Recipes</h1>
-            <form class="search" onSubmit={search}>
+            <form class="search" onSubmit={onSubmit}>
               <input className="app__input"
                   type="text"
                   placeholder="What´s left in my fridge?"
@@ -71,6 +74,7 @@ export default function SearchBar() {
         <div className="app__recipes">
            {recipes.map((recipes) => {
             <RecipeTile recipes={recipes} />
+            console.log(recipes)
             ;
             })}
           </div>
