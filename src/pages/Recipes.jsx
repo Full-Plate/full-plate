@@ -32,6 +32,7 @@ const options = {
     console.log(getRecipeData);
   };
 
+
   axios.request(options).then(function (response) {
 	console.log(response.data);
   }).catch(function (error) {
