@@ -7,24 +7,36 @@ import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
 
 function Recipes() {
-  const YOUR_APP_ID = "17d531d8";
-  const YOUR_APP_KEY = "4250479211cf86c75ca61a0789ddd4f4";
   const [query, setQuery] = useState("");
- 
-  const [recipes, setRecipes] = useState([]);
+  const [recipe, setRecipe] = useState([])
+  const [cookingTime, setCookingTime] = useState();
+  const [ingredients, setIngredients] = useState();
+  const [recipeSummary, setRecipeSummary] = useState();
 
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
+const axios = require("axios");
 
-  const getRecipeInfo = async () => {
-    var result = await Axios.get(url);
-    setRecipes(result.data.hits);
+const options = {
+  method: 'GET',
+  URL:
+   `https://api.spoonacular.com/recipes/complexSearch?number=12&apiKey=8852827ae2294be48706dc188cc2232c&{query}&includeIngredients=true&instructionsRequired=true&tags=true&maxReadyTime=true`
+};
+
+ const getRecipeData = async () => {
+    var result = await Axios.get(URL);
+    setRecipe(result.data.hits);
  
   };
-
-  const onSubmit = (e) => {
+    const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
-    getRecipeInfo();
+    getRecipeData();
+    console.log(getRecipeData);
   };
+
+  axios.request(options).then(function (response) {
+	console.log(response.data);
+  }).catch(function (error) {
+	console.error(error);
+  });
 
   return (
     <>
@@ -40,17 +52,16 @@ function Recipes() {
                   autoComplete="Off"
                   className="app__input"
                   value={query}
-                  onChange={(e) => {setQuery(e.target.value);
+                  onClick={(e) => {setQuery(e.target.value);
                 <input type = "submit"
                       value = "Get Recipe"
                       className = "app__submit" />
-                  }}
-                />
+                  }} />
             </form>
           </div>
         </div>
         <div className="app__recipes">
-          {recipes.map((recipe) => {
+          {getRecipeData.map((recipe) => {
             return <RecipeTile recipe={recipe} />;
             })}
           </div>
