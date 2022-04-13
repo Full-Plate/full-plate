@@ -12,7 +12,7 @@ const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 export default function SearchBar() {
   const [recipes, setRecipes] = useState([]);
 
-  const { query, setQuery, time} = useContext(
+  const {query, setQuery, time} = useContext(
     RecipeContext
   );
 
@@ -44,6 +44,7 @@ export default function SearchBar() {
         console.log(error);
       });
   };
+
     return (
     <>
     <div className="wrapper">
@@ -68,7 +69,10 @@ export default function SearchBar() {
           </div>
         </div>
         <div className="app__recipes">
-        <RecipeTile recipeData={recipes} />
+           {recipes.map((recipes) => {
+            <RecipeTile recipes={recipes} />
+            ;
+            })}
           </div>
     </div>
   

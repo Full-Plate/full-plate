@@ -16,7 +16,7 @@ function RecipeTile({recipes}) {
      setShowModal(prev => !prev)
  }
   return (
-    recipes.image && ( 
+    recipes.recipes.image && ( 
       <div className = "tile-card-container1" >
         <div className = "tile-card" >
           <img className = "tile-recipeTile-image"
@@ -26,8 +26,8 @@ function RecipeTile({recipes}) {
               <Modal recipes={recipes} showModal={showModal} setShowModal={setShowModal} />
         <div className = "tile-card-body" >
           <h2 className = "tile-card-title " >
-            <p> {recipes.title} </p> 
-            <p> {recipes.maxReadyTime} Mins </p> 
+            <p> {recipes.recipe.title} </p> 
+            <p> {recipes.recipes.maxReadyTime} Mins </p> 
           </h2> 
         </div> 
       </div> 
