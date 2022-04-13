@@ -1,15 +1,28 @@
-import React, {useState } from "react";
+import React, {useEffect, useState, useContext } from "react";
+import { RecipeContext } from "../Context/RecipeContext";
 import RecipeTile from "../components/RecipeTile";
+
 
 //styles
 import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
 
-function Recipes() {
-   const [recipes, setRecipes] = useState([]);
-   const { query, setQuery, time} = useState();
+const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
+
+export default function SearchBar() {
+  const [recipes, setRecipes] = useState([]);
+
+  const { query, setQuery, time} = useContext(
+    RecipeContext
+  );
 
 
+  useEffect (() => {
+    fetchRecipes()
+  }, [])
+  useEffect(() => {
+    fetchRecipes();
+  }, []);
 
   function search(event) {
     event.preventDefault();
@@ -19,24 +32,19 @@ function Recipes() {
     setQuery(event.target.value);
   }
 
-  const getRecipes = () => {
-     console.log(getRecipes)
+  const fetchRecipes = () => {
     fetch(
-   `https://api.spoonacular.com/recipes/complexSearch?apiKey=8852827ae2294be48706dc188cc2232c&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&tags=true&maxReadyTime=${time}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=8852827ae2294be48706dc188cc2232c&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&tags=true&maxReadyTime=${time}`
     )
-    
-
-   .then((response) => response.json())
+      .then((response) => response.json())
       .then((data) => {
         setRecipes(data.results);
-        
       })
       .catch((error) => {
         console.log(error);
       });
   };
-
-  return (
+    return (
     <>
     <div className="wrapper">
       <div className="recipesHeader">
@@ -44,25 +52,23 @@ function Recipes() {
         <div className="searchHeader">
           <h1 className="pageTitle">Recipes</h1>
             <form class="search" onSubmit={search}>
-              <input
+              <input className="app__input"
                   type="text"
                   placeholder="What´s left in my fridge?"
                   autoComplete="Off"
-                  className="app__input"
                   value={query}
                   onChange={handleQueryChange}
                   onClick={(e) => {setQuery(e.target.value);
-                <input type = "submit"
-                      value = "Get Recipes"
-                      className = "app__submit" />
+                <input className = "app__submit"
+                       type = "submit"
+                       value = "Get Recipes"
+                       onClick={fetchRecipes}/>
                   }} />
             </form>
           </div>
         </div>
         <div className="app__recipes">
-          {getRecipes.map((recipes) => {
-            return <RecipeTile recipes={recipes} />;
-            })}
+        <RecipeTile recipeData={recipes} />
           </div>
     </div>
   
@@ -70,5 +76,3 @@ function Recipes() {
   
   );
 }
-
-export default Recipes;
