@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Axios from "axios";
+import React, {useState } from "react";
 import RecipeTile from "../components/RecipeTile";
 
 //styles
@@ -7,37 +6,33 @@ import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
 
 function Recipes() {
-  const [query, setQuery] = useState("");
-  const [recipe, setRecipe] = useState([])
-  const [cookingTime, setCookingTime] = useState();
-  const [ingredients, setIngredients] = useState();
-  const [recipeSummary, setRecipeSummary] = useState();
+   const [recipes, setRecipes] = useState([]);
+   const { query, setQuery, time} = useState();
 
-const axios = require("axios");
 
-const options = {
-  method: 'GET',
-  URL:
-   `https://api.spoonacular.com/recipes/complexSearch?number=12&apiKey=8852827ae2294be48706dc188cc2232c&{query}&includeIngredients=true&instructionsRequired=true&tags=true&maxReadyTime=true`
-};
 
- const getRecipeData = async () => {
-    var result = await Axios.get(URL);
-    setRecipe(result.data.hits);
- 
+  function search(event) {
+    event.preventDefault();
+  }
+
+  function handleQueryChange(event) {
+    setQuery(event.target.value);
+  }
+
+  const getRecipes = () => {
+    fetch(
+   `https://api.spoonacular.com/recipes/complexSearch?apiKey=8852827ae2294be48706dc188cc2232c&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&tags=true&maxReadyTime=${time}`
+    )
+
+   .then((response) => response.json())
+      .then((data) => {
+        setRecipes(data.results);
+        console.log(recipes)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-    const onSubmit = (e) => {
-    e.preventDefault(); //this will prevent page from reloading.
-    getRecipeData();
-    console.log(getRecipeData);
-  };
-
-
-  axios.request(options).then(function (response) {
-	console.log(response.data);
-  }).catch(function (error) {
-	console.error(error);
-  });
 
   return (
     <>
@@ -46,24 +41,25 @@ const options = {
         <img className="cookingpot" src={cookingPot} alt="icon" />
         <div className="searchHeader">
           <h1 className="pageTitle">Recipes</h1>
-            <form class="search" onSubmit={onSubmit}>
+            <form class="search" onSubmit={search}>
               <input
                   type="text"
                   placeholder="What´s left in my fridge?"
                   autoComplete="Off"
                   className="app__input"
                   value={query}
+                  onChange={handleQueryChange}
                   onClick={(e) => {setQuery(e.target.value);
                 <input type = "submit"
-                      value = "Get Recipe"
+                      value = "Get Recipes"
                       className = "app__submit" />
                   }} />
             </form>
           </div>
         </div>
         <div className="app__recipes">
-          {getRecipeData.map((recipe) => {
-            return <RecipeTile recipe={recipe} />;
+          {getRecipes.map((recipes) => {
+            return <RecipeTile recipes={recipes} />;
             })}
           </div>
     </div>

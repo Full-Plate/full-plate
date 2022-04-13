@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav/Navbar";
 
 
+
 //pages 
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
@@ -15,6 +16,7 @@ import Donate from "./pages/Donate";
 
 
 function App() {
+
   return (
   
     <div className="App">
