@@ -42,7 +42,7 @@ export default function Recipes() {
       .then((data) => {
         setRecipes(data.results);
       })
-      
+
       .catch((error) => {
         console.log(error);
       });
@@ -69,6 +69,7 @@ export default function Recipes() {
                        onClick={fetchRecipes}/>
                   }} />
             </form>
+            <p className="Search-Options">Psst, you can add up to 5 ingredients!</p>
           </div>
         </div>
         <div className="app__recipes">
