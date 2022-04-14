@@ -1,7 +1,13 @@
 import { Send } from "@mui/icons-material";
 import React from "react";
+import ContactForm from "../components/Form/ContactForm";
+
+
+
+
 
 import "../styles/Contact.css";
+
 
 
 
@@ -19,23 +25,7 @@ function Contact() {
       <p className = "contact-text" > Be it Suggestions, feedback, business opportunities or even how our recipes made you hungry, we would love to hear from you!</p>
       </div>
       <div className="card">
-        <form action="registerForm">
-          <label htmlFor="name">How do we address you?</label>
-          <input 
-          name="name"
-          required/>
-          <label htmlFor="email">Your E-mail</label>
-          <input
-           name="email" 
-           type="email"
-          required />
-          <label htmlFor="comment">
-            What would you like to say?
-          </label>
-          <textarea 
-          name="comment" id="" rows="5" maxLength={1000}/>
-          <button type="submit">send</button>
-        </form>
+        <ContactForm />
       </div> 
     </div>
   </div>

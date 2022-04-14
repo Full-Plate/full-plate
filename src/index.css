@@ -32,6 +32,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  transition: ease-in-out 300ms;
+}
+
+button:hover {
+  background-color: rgba(81, 103, 155, 0.3);
+}
 
 
 
