@@ -7,7 +7,7 @@ import "./Modal.css"
 
 export const Modal = ({ showModal, setShowModal, recipe }) => {
   const {
-    extendedIngredients,
+    ingredients,
     analyzedInstructions,
 } = recipe;
 
@@ -61,10 +61,20 @@ console.log(recipe)
                  <p> {recipe.summary.substring(0, 70)}</p>
                  <div>
                    <div className="ingredientsContainer">
-                   <Fragment>
+                  <Fragment>
                       <h2>Ingredients</h2>
-                       <ul>
-                    
+                         <ul>
+              {analyzedInstructions[0].steps[0].ingredients[0].map((ingredients) => {
+              
+                return (
+                  <li>
+                    <span>
+                      {ingredients.number}
+                    </span>{' '}
+                    <span>{ingredients.ingredients}</span>
+                  </li>
+                );
+              })}
                      </ul>
                       </Fragment> 
                 <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
