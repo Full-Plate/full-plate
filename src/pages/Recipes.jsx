@@ -20,9 +20,7 @@ export default function Recipes() {
   useEffect (() => {
     fetchRecipes()
   }, [])
-  useEffect(() => {
-    fetchRecipes();
-  }, []);
+
 
   const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
@@ -69,7 +67,8 @@ export default function Recipes() {
                        onClick={fetchRecipes}/>
                   }} />
             </form>
-            <p className="Search-Options">Psst, you can add up to 5 ingredients!</p>
+            <p className="Search-Options">Psst, you can add up to 5 ingredients! ex: Cheese, bread..etc</p>
+            
           </div>
         </div>
         <div className="app__recipes">
