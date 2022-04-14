@@ -10,6 +10,7 @@ import  cookingPot  from '../assets/cookingPot.svg';
 const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
 export default function Recipes() {
+const [message, setMessage] = useState();
   const [recipes, setRecipes] = useState([]);
 
   const {query, setQuery, time} = useContext(
@@ -19,6 +20,7 @@ export default function Recipes() {
 
   useEffect (() => {
     fetchRecipes()
+  
   }, [])
 
 
@@ -39,6 +41,14 @@ export default function Recipes() {
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data.results);
+    
+        if (data.length === 0) {
+        setMessage(
+          "Darn! Can't find any recipes. Try adding more ingredients."
+        );
+      } else {
+        setMessage('');
+      }
       })
       .catch((error) => {
         console.log(error);
