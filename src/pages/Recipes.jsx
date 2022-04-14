@@ -21,7 +21,7 @@ export default function Recipes() {
   }
   const fetchRecipes = () => {
     fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&maxReadyTime=${time}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -52,7 +52,7 @@ export default function Recipes() {
                        onClick={fetchRecipes}/>
                   }} />
             </form>
-            <p className="Search-Options">Psst, you can add up to 5 ingredients!</p>
+            <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex:Cheese, pasta, bread...etc</p>
           </div>
         </div>
         <div className="app__recipes">
