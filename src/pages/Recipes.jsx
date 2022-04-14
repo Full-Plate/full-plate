@@ -40,7 +40,6 @@ export default function Recipes() {
       .then((data) => {
         setRecipes(data.results);
       })
-
       .catch((error) => {
         console.log(error);
       });
@@ -73,7 +72,8 @@ export default function Recipes() {
         </div>
         <div className="app__recipes">
            {recipes.map((recipe) => {
-            return <RecipeTile recipe={recipe} />    
+             console.log(recipe); 
+            return <RecipeTile recipe={recipe} />             
 })}
           </div>
     </div>

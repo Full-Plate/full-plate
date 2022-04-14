@@ -6,7 +6,7 @@ import { MdOutlineMail} from 'react-icons/md';
 import "./Modal.css"
 
 export const Modal = ({ showModal, setShowModal, recipe }) => {
-  const modalRef = useRef();
+  const modalRef = useRef(recipe);
 
   const animation = useSpring({
     config: {
@@ -49,18 +49,15 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
          <animated.div style={animation}>
             <div className="ModalWrapper" showModal={showModal}>
                <img className = "recipe-image"
-              src = {recipe.recipe.image}></img>
+              src = {recipe.image}></img>
               <div className= "ModalContent">
-                <h1>{recipe.recipe.label}</h1>
+                <h1>{recipe.title}</h1>
+                  <p>{recipe.summaryreplace(/<\s*b>(.*?)/gm, '')}</p>
                 <h2>Ingredients</h2>
                 <ul className="RecipeIngList">
-                <li>{recipe.recipe.ingredientLines[1]}</li>
-                 <li>{recipe.recipe.ingredientLines[2]}</li>
-                 <li>{recipe.recipe.ingredientLines[3]}</li>
-                 <li>{recipe.recipe.ingredientLines[4]}</li>
-                 <li>{recipe.recipe.ingredientLines[5]}</li>
+                <li>{recipe.analyzedInstructions[{name: '', steps: Array(8)}]}</li>
                  </ul>
-                <h3 className="cookingTime"> {recipe.recipe.totalTime} Mins </h3> 
+                <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
                   <MdOutlineMail className="EmailIcon" />
       
               </div>
