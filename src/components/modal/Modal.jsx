@@ -52,10 +52,11 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
               src = {recipe.image}></img>
               <div className= "ModalContent">
                 <h1>{recipe.title}</h1>
-                  <p>{recipe.summaryreplace(/<\s*b>(.*?)/gm, '')}</p>
+                  
                 <h2>Ingredients</h2>
                 <ul className="RecipeIngList">
-                <li>{recipe.analyzedInstructions[{name: '', steps: Array(8)}]}</li>
+                <li>{recipe.analyzedInstructions}</li>
+                <li>{recipe.recipe.ingredientLines}</li>
                  </ul>
                 <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
                   <MdOutlineMail className="EmailIcon" />

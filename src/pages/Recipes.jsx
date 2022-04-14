@@ -10,25 +10,24 @@ import  cookingPot  from '../assets/cookingPot.svg';
 const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
 export default function Recipes() {
-const [message, setMessage] = useState();
+
   const [recipes, setRecipes] = useState([]);
 
   const {query, setQuery, time} = useContext(
     RecipeContext
   );
-
-
-  useEffect (() => {
-    fetchRecipes()
+ 
+  useEffect(() => {
+    fetchRecipes();
+  }, []);
   
-  }, [])
-
 
   const onSubmit = (e) => {
-    e.preventDefault(); //this will prevent page from reloading.
+    e.preventDefault(); 
     fetchRecipes();
    
   };
+
 
   function handleQueryChange(event) {
     setQuery(event.target.value);
@@ -36,25 +35,20 @@ const [message, setMessage] = useState();
 
   const fetchRecipes = () => {
     fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=8852827ae2294be48706dc188cc2232c&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&tags=true&maxReadyTime=${time}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&maxReadyTime=${time}`
     )
+    
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data.results);
-    
-        if (data.length === 0) {
-        setMessage(
-          "Darn! Can't find any recipes. Try adding more ingredients."
-        );
-      } else {
-        setMessage('');
-      }
       })
       .catch((error) => {
         console.log(error);
       });
-  };
 
+  
+
+  };
     return (
     <>
     <div className="wrapper">
@@ -76,14 +70,14 @@ const [message, setMessage] = useState();
                        onClick={fetchRecipes}/>
                   }} />
             </form>
-            <p className="Search-Options">Psst, you can add up to 5 ingredients! ex: Cheese, bread..etc</p>
+            <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex: Cheese, bread..etc</p>
             
           </div>
         </div>
         <div className="app__recipes">
-           {recipes.map((recipe) => {
-             console.log(recipe); 
-            return <RecipeTile recipe={recipe} />             
+       {recipes.map((recipe) => {
+         console.log(recipe)
+            return <RecipeTile recipe={recipe} />    
 })}
           </div>
     </div>
