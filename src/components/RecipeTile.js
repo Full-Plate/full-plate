@@ -9,7 +9,7 @@ import "../styles/RecipeTile.css";
 
 
 
-function RecipeTile({recipes, title, image}) {
+function RecipeTile({recipes}) {
   const [showModal, setShowModal] = useState(false)
  
   const openModal = () => {
@@ -20,7 +20,7 @@ function RecipeTile({recipes, title, image}) {
       <div className = "tile-card-container1" >
         <div className = "tile-card" >
           <img className = "tile-recipeTile-image"
-              src = {recipes.id.image}
+              src = {recipes.image}
               alt = {recipes.image}
               onClick = {openModal}/> 
               <Modal recipes={recipes} showModal={showModal} setShowModal={setShowModal} />
