@@ -40,7 +40,12 @@ transition: all 250ms ease-in-out;
 backface-visibility: hidden;
 transform-style: preserve-3d;
 }
+.Search-Options{
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
 
+}
 
 .app__recipes {
   flex-wrap: wrap;

@@ -1,32 +1,37 @@
-import { useState } from "react";
-import Axios from "axios";
+import React, {useEffect, useState, useContext } from "react";
+import { RecipeContext } from "../Context/RecipeContext";
 import RecipeTile from "../components/RecipeTile";
-
 //styles
 import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
-
-function Recipes() {
-  const YOUR_APP_ID = "17d531d8";
-  const YOUR_APP_KEY = "4250479211cf86c75ca61a0789ddd4f4";
-  const [query, setQuery] = useState("");
- 
+const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
+export default function Recipes() {
   const [recipes, setRecipes] = useState([]);
-
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
-
-  const getRecipeInfo = async () => {
-    var result = await Axios.get(url);
-    setRecipes(result.data.hits);
- 
-  };
+  const {query, setQuery, time} = useContext(
+    RecipeContext
+  );
 
   const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
-    getRecipeInfo();
+    fetchRecipes();
+   
   };
-
-  return (
+  function handleQueryChange(event) {
+    setQuery(event.target.value);
+  }
+  const fetchRecipes = () => {
+    fetch(
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&maxReadyTime=${time}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setRecipes(data.results);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+    return (
     <>
     <div className="wrapper">
       <div className="recipesHeader">
@@ -34,31 +39,29 @@ function Recipes() {
         <div className="searchHeader">
           <h1 className="pageTitle">Recipes</h1>
             <form class="search" onSubmit={onSubmit}>
-              <input
+              <input className="app__input"
                   type="text"
                   placeholder="What´s left in my fridge?"
                   autoComplete="Off"
-                  className="app__input"
                   value={query}
-                  onChange={(e) => {setQuery(e.target.value);
-                <input type = "submit"
-                      value = "Get Recipe"
-                      className = "app__submit" />
-                  }}
-                />
+                  onChange={handleQueryChange}
+                  onClick={(e) => {setQuery(e.target.value);
+                <input className = "app__submit"
+                       type = "submit"
+                       value = "Get Recipes"
+                       onClick={fetchRecipes}/>
+                  }} />
             </form>
+            <p className="Search-Options">Psst, you can add up to 5 ingredients!</p>
           </div>
         </div>
         <div className="app__recipes">
-          {recipes.map((recipe) => {
-            return <RecipeTile recipe={recipe} />;
-            })}
+           {recipes.map((recipe) => {
+             console.log(recipe)
+            return <RecipeTile recipe={recipe} />    
+})}
           </div>
     </div>
-  
-  </>
-  
-  );
+    </>
+     );
 }
-
-export default Recipes;

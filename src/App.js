@@ -1,10 +1,11 @@
 
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //components
 import Navbar from "./components/Nav/Navbar";
 
+import { RecipeContext } from './Context/RecipeContext';
 
 //pages 
 import Home from "./pages/Home";
@@ -14,10 +15,19 @@ import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 
 
+
 function App() {
+  const [query, setQuery] = useState("");
+  const [time, setTime] = useState(60)
+
   return (
   
     <div className="App">
+        <RecipeContext.Provider
+        value={{ 
+          query, setQuery,
+          time, setTime, 
+           }}>
       <Router>
         <Navbar />
         <div class="container">
@@ -30,6 +40,7 @@ function App() {
         </Routes>
         </div>
       </Router>
+      </RecipeContext.Provider>
     </div>
     
 
