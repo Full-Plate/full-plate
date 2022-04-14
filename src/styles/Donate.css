@@ -91,7 +91,7 @@
   font-family: 'Montserrat', sans-serif;
   margin-top: 25px;
   color: #101828;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
   line-height: 25px;
   background-color: #F9B686;
@@ -104,7 +104,6 @@
 }
 .donatebutton:hover {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f1b587;
   cursor: pointer;
   transition: 0.3s ease-in;
 }

@@ -11,8 +11,8 @@ export default function Donate() {
         <div className="donateText">
           <h1> Why Donate? </h1>
           <p className="topText"> On average, we throw away 103 pounds of food
-              each year. 103 pounds is about a month of meals for another person </p>
-          <p> A better question: Why <span>not</span> donate</p>
+              each year. 103 pounds is about a month of meals for another person. </p>
+          <p> A better question: Why <span>not</span> donate?</p>
         </div>
         <img src={orginfo} alt="cityfridgeorgimage" />
       </div>

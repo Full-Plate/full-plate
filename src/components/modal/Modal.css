@@ -1,7 +1,7 @@
 .Background {
   background: rgba(102, 112, 133, 0.25);
   backdrop-filter: blur(2px);
-  width: 100%;
+  width: 100vw;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -15,22 +15,32 @@
 }
 
 .ModalWrapper{
-  width: 100rem;
-  height: 50rem;
+  width: 80vw;
+  height: 70vh;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #FFDBA4;
   color: #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
+  display: flex;  
   z-index: 10;
   border-radius:20px;
+  position: relative;
+  justify-content: center;
 }
 
 .recipe-image {
-  width: 100%;
+  max-width: 50%;
   border-radius: 20px 0 0 20px;
   background: #FFDBA4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-image img {
+  max-width: 100%;
+  
+
+  border-radius: 50px;
 }
 
 .ModalContent {
@@ -40,6 +50,7 @@
   align-items: center;
   line-height: 1.8;
   color: #141414;
+  width: 50%;
 }
 
 .ModalContent h2 {
@@ -75,4 +86,22 @@
 .cookingTime
 {
   
+}
+
+@media screen and (max-width:1050px){
+  
+  .ModalWrapper{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ModalWrapper img {
+   
+  }
+
+  .ModalContent {
+    width: 100%;
+  }
+
 }

@@ -48,8 +48,11 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
       <div className="Background" onClick={closeModal} ref={modalRef}>
          <animated.div style={animation}>
             <div className="ModalWrapper" showModal={showModal}>
-               <img className = "recipe-image"
+
+              <div  className = "recipe-image">
+              <img
               src = {recipe.image}></img>
+              </div>
               <div className= "ModalContent">
                 <h1>{recipe.title}</h1>
                  <p> {recipe.summary.replace(/<b>(.*?)/gm, '')}</p>
