@@ -48,8 +48,11 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
       <div className="Background" onClick={closeModal} ref={modalRef}>
          <animated.div style={animation}>
             <div className="ModalWrapper" showModal={showModal}>
-               <img className = "recipe-image"
+              <div  className = "recipe-image">
+              <img
               src = {recipe.recipe.image}></img>
+              </div>
+               
               <div className= "ModalContent">
                 <h1>{recipe.recipe.label}</h1>
                 <h2>Ingredients</h2>
