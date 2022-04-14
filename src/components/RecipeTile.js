@@ -27,7 +27,7 @@ function RecipeTile({ recipe }) {
         <div className = "tile-card-body" >
           <h2 className = "tile-card-title " >
             <p> {recipe.title} </p> 
-            <p> {recipe.maxReadyTime} Mins </p> 
+            <p> {recipe.readyInMinutes} Mins </p> 
           </h2> 
         </div> 
       </div> 
