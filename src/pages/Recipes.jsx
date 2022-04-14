@@ -1,43 +1,28 @@
 import React, {useEffect, useState, useContext } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
 import RecipeTile from "../components/RecipeTile";
-
-
 //styles
 import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
-
 const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
-
 export default function Recipes() {
-
   const [recipes, setRecipes] = useState([]);
-
   const {query, setQuery, time} = useContext(
     RecipeContext
   );
- 
-  useEffect(() => {
-    fetchRecipes();
-  }, []);
-  
 
   const onSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault(); //this will prevent page from reloading.
     fetchRecipes();
    
   };
-
-
   function handleQueryChange(event) {
     setQuery(event.target.value);
   }
-
   const fetchRecipes = () => {
     fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&maxReadyTime=${time}`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&instructionsRequired=true&maxReadyTime=${time}`
     )
-    
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data.results);
@@ -45,9 +30,6 @@ export default function Recipes() {
       .catch((error) => {
         console.log(error);
       });
-
-  
-
   };
     return (
     <>
@@ -70,19 +52,16 @@ export default function Recipes() {
                        onClick={fetchRecipes}/>
                   }} />
             </form>
-            <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex: Cheese, bread..etc</p>
-            
+            <p className="Search-Options">Psst, you can add up to 5 ingredients!</p>
           </div>
         </div>
         <div className="app__recipes">
-       {recipes.map((recipe) => {
-         console.log(recipe)
+           {recipes.map((recipe) => {
+             console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
           </div>
     </div>
-  
-  </>
-  
-  );
+    </>
+     );
 }
