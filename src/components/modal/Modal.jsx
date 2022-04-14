@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useEffect, useCallback, Fragment} from 'react';
 import { useSpring, animated } from 'react-spring';
 import { MdClose } from 'react-icons/md';
 import { MdOutlineMail} from 'react-icons/md';
@@ -6,8 +6,13 @@ import { MdOutlineMail} from 'react-icons/md';
 import "./Modal.css"
 
 export const Modal = ({ showModal, setShowModal, recipe }) => {
-  const modalRef = useRef(recipe);
+  const {
+    extendedIngredients,
+    analyzedInstructions,
+} = recipe;
 
+  const modalRef = useRef(recipe);
+console.log(recipe)
   const animation = useSpring({
     config: {
       duration: 250
@@ -40,7 +45,7 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
     [keyPress]
   );
 
-
+  
   return (
     <>
       {showModal ? (
@@ -48,26 +53,51 @@ export const Modal = ({ showModal, setShowModal, recipe }) => {
       <div className="Background" onClick={closeModal} ref={modalRef}>
          <animated.div style={animation}>
             <div className="ModalWrapper" showModal={showModal}>
-
               <div  className = "recipe-image">
-              <img
-              src = {recipe.image}></img>
+              <img src = {recipe.image}></img>
               </div>
               <div className= "ModalContent">
                 <h1>{recipe.title}</h1>
-                 <p> {recipe.summary.replace(/<b>(.*?)/gm, '')}</p>
-                <h2>Ingredients</h2>
-                <ul className="RecipeIngList">
-                 </ul>
+                 <p> {recipe.summary.substring(0, 70)}</p>
+                 <div>
+                   <div className="ingredientsContainer">
+                   <Fragment>
+                      <h2>Ingredients</h2>
+                       <ul>
+                    
+                     </ul>
+                      </Fragment> 
                 <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
                   <MdOutlineMail className="EmailIcon" />
-        
+                 </div>
+                 <Fragment>
+                 <ul className="RecipeIngList">
+                    <ul>
+              {analyzedInstructions[0].steps.map((step) => {
+                return (
+                  <li>
+                    <span>
+                      {step.number}
+                    </span>{' '}
+                    <span>{step.step}</span>
+                  </li>
+                );
+              })}
+            </ul>
+                 </ul>
+                 </Fragment>
               </div>
+            
               <MdClose className = "CloseModalButton"
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
-          
+          </div>
+          <div className="instructionsContainer">
+          <ul>
+            <li></li>
+          </ul>
+          </div>
            </animated.div>
            </div>
            

@@ -1,10 +1,12 @@
-import React, {useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
 import RecipeTile from "../components/RecipeTile";
 //styles
 import "../styles/Recipes.css";
 import  cookingPot  from '../assets/cookingPot.svg';
 const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
+
+
 export default function Recipes() {
   const [recipes, setRecipes] = useState([]);
   const {query, setQuery, time} = useContext(
@@ -26,6 +28,7 @@ export default function Recipes() {
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data.results);
+        
       })
       .catch((error) => {
         console.log(error);
@@ -52,7 +55,7 @@ export default function Recipes() {
                        onClick={fetchRecipes}/>
                   }} />
             </form>
-            <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex:Cheese, pasta, bread...etc</p>
+            <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex: Cheese, pasta, bread...etc</p>
           </div>
         </div>
         <div className="app__recipes">
@@ -60,7 +63,10 @@ export default function Recipes() {
              console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
-          </div>
+{recipes.length === 0 &&
+<p>Sorry there are no recipes that match those ingredients</p>
+}
+     </div>
     </div>
     </>
      );
