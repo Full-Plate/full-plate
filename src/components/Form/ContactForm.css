@@ -7,3 +7,14 @@
   align-items: center;
   padding: 15px 0px;
 }
+
+@media screen and (max-width: 946px) {
+
+
+  .succeedSubmit {
+    text-align: center;
+  }
+  
+  
+  
+  }
