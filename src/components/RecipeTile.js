@@ -9,25 +9,25 @@ import "../styles/RecipeTile.css";
 
 
 
-function RecipeTile({recipes}) {
+function RecipeTile({ recipe }) {
   const [showModal, setShowModal] = useState(false)
  
   const openModal = () => {
      setShowModal(prev => !prev)
  }
   return (
-    recipes.recipes.image && ( 
+    recipe.image && (
       <div className = "tile-card-container1" >
         <div className = "tile-card" >
           <img className = "tile-recipeTile-image"
-              src = {recipes.image}
-              alt = {recipes.image}
+              src = {recipe.image}
+              alt = {recipe.image}
               onClick = {openModal}/> 
-              <Modal recipes={recipes} showModal={showModal} setShowModal={setShowModal} />
+              <Modal recipe={recipe} showModal={showModal} setShowModal={setShowModal} />
         <div className = "tile-card-body" >
           <h2 className = "tile-card-title " >
-            <p> {recipes.recipe.title} </p> 
-            <p> {recipes.recipes.maxReadyTime} Mins </p> 
+            <p> {recipe.title} </p> 
+            <p> {recipe.maxReadyTime} Mins </p> 
           </h2> 
         </div> 
       </div> 

@@ -73,11 +73,9 @@ export default function Recipes() {
           </div>
         </div>
         <div className="app__recipes">
-           {recipes.map((recipes) => {
-            <RecipeTile recipes={recipes} />
-            console.log(recipes)
-            ;
-            })}
+           {recipes.map((recipe) => {
+            return <RecipeTile recipe={recipe} />    
+})}
           </div>
     </div>
   
