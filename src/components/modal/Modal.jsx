@@ -4,14 +4,17 @@ import { MdClose } from 'react-icons/md';
 import { MdOutlineMail} from 'react-icons/md';
 
 import "./Modal.css"
+import {IngredientsService} from "../IngredientsService";
 
+//MODAL
 export const Modal = ({ showModal, setShowModal, recipe }) => {
-  const {
+  const { 
     ingredients,
     analyzedInstructions,
 } = recipe;
 
-  const modalRef = useRef(recipe);
+
+const modalRef = useRef(recipe);
 console.log(recipe)
   const animation = useSpring({
     config: {
@@ -45,6 +48,7 @@ console.log(recipe)
     [keyPress]
   );
 
+
   
   return (
     <>
@@ -61,28 +65,17 @@ console.log(recipe)
                  <p> {recipe.summary.substring(0, 70)}</p>
                  <div>
                    <div className="ingredientsContainer">
-                  <Fragment>
-                      <h2>Ingredients</h2>
-                    <ul>
-              {analyzedInstructions[0].steps[0].ingredients[0].map((ingredients) => {
-              
-                return (
-                  <li>
-                    <span>
-                      {ingredients.number}
-                    </span>{' '}
-                    <span>{ingredients.ingredients}</span>
-                  </li>
-                );
-              })}
-                     </ul>
-                      </Fragment> 
+                    <h2>Ingredients</h2>
+                      <ul className="ingredient-list">
+                      <ingredientsService ingredients={ingredients}/>
+                    
+                      </ul>
+                   
                 <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
                   <MdOutlineMail className="EmailIcon" />
                  </div>
                  <Fragment>
-                 <ul className="RecipeIngList">
-                    <ul>
+              <ul>
               {analyzedInstructions[0].steps.map((step) => {
                 return (
                   <li>
@@ -94,7 +87,6 @@ console.log(recipe)
                 );
               })}
             </ul>
-                 </ul>
                  </Fragment>
               </div>
             

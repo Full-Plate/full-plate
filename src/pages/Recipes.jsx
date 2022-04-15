@@ -9,6 +9,7 @@ const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
 export default function Recipes() {
   const [recipes, setRecipes] = useState([]);
+
   const {query, setQuery, time} = useContext(
     RecipeContext
   );
@@ -21,6 +22,7 @@ export default function Recipes() {
   function handleQueryChange(event) {
     setQuery(event.target.value);
   }
+   
   const fetchRecipes = () => {
     fetch(
           `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}`
