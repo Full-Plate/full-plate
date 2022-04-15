@@ -4,12 +4,11 @@ import { MdClose } from 'react-icons/md';
 import { MdOutlineMail} from 'react-icons/md';
 
 import "./Modal.css"
-import {IngredientsService} from "../IngredientsService";
 
-//MODAL
-export const Modal = ({ showModal, setShowModal, recipe }) => {
-  const { 
-    ingredients,
+
+ export const Modal = ({ showModal, setShowModal, recipe }) => {
+ const {
+    extendedIngredients,
     analyzedInstructions,
 } = recipe;
 
@@ -66,11 +65,15 @@ console.log(recipe)
                  <div>
                    <div className="ingredientsContainer">
                     <h2>Ingredients</h2>
-                      <ul className="ingredient-list">
-                      <ingredientsService ingredients={ingredients}/>
-                    
-                      </ul>
-                   
+                        <ul>
+          {extendedIngredients.map((ingredient) => {
+            return (
+              <li className="text-sm text-gray-600 p-3 bg-gray-100 odd:bg-gray-200">
+                {ingredient.original}
+              </li>
+            );
+          })}
+        </ul>
                 <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
                   <MdOutlineMail className="EmailIcon" />
                  </div>
