@@ -63,7 +63,7 @@ console.log(recipe)
                    <div className="ingredientsContainer">
                   <Fragment>
                       <h2>Ingredients</h2>
-                         <ul>
+                    <ul>
               {analyzedInstructions[0].steps[0].ingredients[0].map((ingredients) => {
               
                 return (
