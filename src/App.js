@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav/Navbar";
 
 import { RecipeContext } from './Context/RecipeContext';
-import { AlertProvider } from './Context/AlertContext'
+
 //pages 
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
@@ -28,7 +28,7 @@ function App() {
           query, setQuery,
           time, setTime, 
            }}>
-             < AlertProvider >
+          
       <Router>
         <Navbar />
         <div class="container">
@@ -43,7 +43,7 @@ function App() {
         </Routes>
         </div>
       </Router>
-      </AlertProvider>
+    
       </RecipeContext.Provider>
       
     </div>

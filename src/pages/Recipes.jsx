@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
-import Alert from '../components/Alert';
+
+
 import RecipeTile from "../components/RecipeTile";
 //styles
 import "../styles/Recipes.css";
@@ -10,16 +11,24 @@ const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
 export default function Recipes() {
   const [recipes, setRecipes] = useState([]);
-
+  const [message, setMessage] = useState();
   const {query, setQuery, time} = useContext(
     RecipeContext
   );
 
   const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
-    fetchRecipes();
-   
+    fetchRecipes(recipes)
+
+    if (recipes.length === 0 ) {
+      setMessage("Darn! Can't find any recipes. Try adding more ingredients."
+        );
+    } else {
+      setMessage('');
+    }
+
   };
+  
   function handleQueryChange(event) {
     setQuery(event.target.value);
   }
@@ -67,7 +76,7 @@ export default function Recipes() {
             return <RecipeTile recipe={recipe} />    
 })}
      </div>
-        <Alert />
+       <p className="noRecipeMessage">{message}</p>
     </div>
     </>
      );
