@@ -21,7 +21,7 @@ function Home() {
           <p className="discritpion">We are here to help you find ways to use all the ingredients you 
             have on hand. We believe that mindful meal planning is not confined
             to your kitchen. Join us on a journey towards a Full Plate - both for yourself
-            and for others</p>
+            and for others.</p>
              <Link className="button" to="/Recipes">
           <button> Get Started</button>
           </Link>

@@ -20,9 +20,9 @@ function Contact() {
     <h1 className="contact-header">We would love to hear from you</h1>
     <div className="contact-container">
       <div className="left-contact-container">
-      <p className= "contact-text"> Got Something you can not wait to share with us </p> 
+      <p className= "contact-text"> Got something you cannot wait to share with us?</p> 
       <br />
-      <p className = "contact-text" > Be it Suggestions, feedback, business opportunities or even how our recipes made you hungry, we would love to hear from you!</p>
+      <p className = "contact-text" > Be it suggestions, feedback, business opportunities or even how our recipes made you hungry, we would love to hear from you!</p>
       </div>
       <div className="card">
         <ContactForm />

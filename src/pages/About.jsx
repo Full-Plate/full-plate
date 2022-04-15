@@ -32,7 +32,7 @@ function About() {
         < div class = "about-image" >
          <img src={maps} alt="maps-image" />
           <p>Sharing is caring. Here is an alternative for your 
-            unused ingredients so you can donate to hep your community.
+            unused ingredients so you can donate to help your community.
           </p>
         </div>
         </div>
@@ -44,7 +44,7 @@ function About() {
         <div className="team-image-card">
          
           <div className="leftTeamContainer">
-          <img className="headshot" src={kristtelle} alt="kristtelle" />
+          <img className="headshot" src={kristtelle} alt="kristelle" />
            <h3 >Kristelle</h3> 
           <h3 className="role"> Product Manager</h3>
           <ul className="social">
@@ -60,7 +60,7 @@ function About() {
           </div>
           
           <div className="rightTeamContainer">
-          <p>Hi! I am kristtelle. At my current job, I work with customers inside and outside of the company to help them with their problems. I have enjoyed it so much that I decided to fully plunge into creating products that truly benefit customers. Food is a big part of my life, so we are excited to share Full Plate with everyone!</p>
+          <p>Hi! I am Kristelle. At my current job, I work with customers inside and outside of the company to help them with their problems. I have enjoyed it so much that I decided to fully plunge into creating products that truly benefit customers. Food is a big part of my life, so we are excited to share Full Plate with everyone!</p>
           </div>
         </div>
          <div className="team-image-card">
@@ -101,7 +101,7 @@ function About() {
           </ul>
           </div>
             <div className="rightTeamContainer">
-            < p > Hi! I am Elleta. I am a Frontend Software Developer who is adept in bringing forth expertise in the design, installation, testing, and maintenance of software systems. I am an active and curious individual with a passion for learning and self-improvement. Creating full plate has been a great learning experience for me. 
+            < p > Hi! I am Elleta. I am a Front-end Software Developer who is adept in bringing forth expertise in the design, installation, testing, and maintenance of software systems. I am an active and curious individual with a passion for learning and self-improvement. Creating Full Plate has been a great learning experience for me. 
           </p>
           </div>
         </div>
