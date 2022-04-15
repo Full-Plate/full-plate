@@ -21,14 +21,14 @@ export default function Recipes() {
     fetchRecipes(recipes)
 
     if (recipes.length === 0 ) {
-      setMessage("Darn! Can't find any recipes. Try adding more ingredients."
+      setMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination"
         );
     } else {
       setMessage('');
     }
 
   };
-  
+
   function handleQueryChange(event) {
     setQuery(event.target.value);
   }
@@ -75,7 +75,7 @@ export default function Recipes() {
              console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
-     </div>
+     </div >
        <p className="noRecipeMessage">{message}</p>
     </div>
     </>

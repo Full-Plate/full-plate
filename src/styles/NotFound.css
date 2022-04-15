@@ -16,13 +16,9 @@ line-height: 37px;
 
 }
 
-.opps{
+.noRecipeMessage{
 padding-top: 1.5rem;
-position: absolute;
-width: 364px;
-height: 75px;
-left: 257px;
-top: 465px; 
+margin-left: 25rem;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
