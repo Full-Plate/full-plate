@@ -22,7 +22,8 @@
 }
 
 .tile-card:hover {
-	transform: scale(120%);
+	box-shadow: rgba(81, 103, 155, 0.3) 0px 0px 0px 5px;
+	background-color: rgba(81, 103, 155, 0.3);
 }
 
  .tile-recipeTile-image {
