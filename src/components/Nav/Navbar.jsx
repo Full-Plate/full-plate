@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 
 import "../../styles/Navbar.css";
@@ -11,9 +11,14 @@ function Navbar() {
 
   return (
     <>
-  <nav>  
-    <img className="logo" src={Logo} ></img>
-    {/* <img className="mobileLogo" src={Logo}/> */}
+  <nav> 
+    <NavLink to ="/">
+    <a href="" className="logo">
+    <img className="logo" src={Logo} ></img> 
+    </a> 
+    </NavLink>
+    
+    
     <HamburgerMenu />
          < ul className ="navLinks">
            <li className="items"><Link to = "/" > Home </Link> </li>

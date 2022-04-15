@@ -37,7 +37,7 @@ li.items {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 938px) {
   display: ${({ close }) => close ? 'flex': 'flex'};
   transform: ${({ close }) => close ? 'translateX(0)' : 'translateX(-100%)'};
   
