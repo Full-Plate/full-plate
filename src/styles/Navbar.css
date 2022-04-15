@@ -60,7 +60,7 @@ ul.navLinks {
   margin: 0;
 }
 
-.logo{
+a.logo{
   width: 141px;
   height: 70px;
   margin-left: 61px;
@@ -96,7 +96,7 @@ ul.navLinks {
   }
 
 
-  @media screen and (max-width: 896px) {
+  @media screen and (max-width: 938px) {
 
     nav {
       justify-content: center;
@@ -106,9 +106,15 @@ ul.navLinks {
       display: none;
     }
     
-    .logo {
-     margin-left: 0;
+    a.logo {
+     margin: 0;
     }
+
+    a.logo {
+      
+ 
+    }
+
   }
 
   @media screen and (max-width: 500px){

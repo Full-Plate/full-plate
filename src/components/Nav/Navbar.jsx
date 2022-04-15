@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <>
   <nav> 
-    <NavLink to ="/" className="logo">
+    <NavLink to ="/">
     <a href="" className="logo">
     <img className="logo" src={Logo} ></img> 
     </a> 
