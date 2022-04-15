@@ -13,7 +13,7 @@ import Recipes from "./pages/Recipes";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
-
+import NotFound from './pages/NotFound'
 
 
 function App() {
@@ -37,6 +37,8 @@ function App() {
           <Route path="/recipes" element={<Recipes/>} />
           <Route path="/donate" element={<Donate/>} />
           <Route path="/contact" element={<Contact/>} />
+           <Route path='/notfound' element={<NotFound />} />
+            <Route path='*' element={<NotFound />} />
         </Routes>
         </div>
       </Router>
