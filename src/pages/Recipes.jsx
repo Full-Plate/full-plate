@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
+import Alert from '../components/Alert';
 import RecipeTile from "../components/RecipeTile";
 //styles
 import "../styles/Recipes.css";
@@ -65,10 +66,8 @@ export default function Recipes() {
              console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
-{recipes.length === 0 &&
-<p>Sorry there are no recipes that match those ingredients</p>
-}
      </div>
+        <Alert />
     </div>
     </>
      );
