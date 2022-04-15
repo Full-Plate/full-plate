@@ -18,8 +18,11 @@
 	border: 1px solid rgba(250, 193, 107, 0.5);
 	flex-wrap: wrap;
 	margin: 35px;
+	transition: 300ms ease-in-out;
+}
 
-	
+.tile-card:hover {
+	transform: scale(120%);
 }
 
  .tile-recipeTile-image {
