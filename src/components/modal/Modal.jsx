@@ -53,18 +53,22 @@ console.log(recipe)
     <>
       {showModal ? (
      
-      <div className="Background" onClick={closeModal} ref={modalRef}>
-         <animated.div style={animation}>
-            <div className="ModalWrapper" showModal={showModal}>
+      <div className="Background" >
+         
+            <div className="ModalWrapper" >
+            
               <div  className = "recipe-image">
+              <h1>{recipe.title}</h1>
               <img src = {recipe.image}></img>
+              <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
+              <p> {recipe.summary.substring(0, 70)}</p>
               </div>
               <div className= "ModalContent">
-                <h1>{recipe.title}</h1>
-                 <p> {recipe.summary.substring(0, 70)}</p>
-                 <div>
+                
+                 
+              <h2>Ingredients</h2>
                    <div className="ingredientsContainer">
-                    <h2>Ingredients</h2>
+                    
                         <ul>
           {extendedIngredients.map((ingredient) => {
             return (
@@ -74,11 +78,12 @@ console.log(recipe)
             );
           })}
         </ul>
-                <h3 className="cookingTime"> {recipe.readyInMinutes} Mins </h3> 
+                
                   <MdOutlineMail className="EmailIcon" />
                  </div>
                  <Fragment>
-              <ul>
+                   <div className="instructionsContainer">
+                   <ul>
               {analyzedInstructions[0].steps.map((step) => {
                 return (
                   <li>
@@ -90,20 +95,18 @@ console.log(recipe)
                 );
               })}
             </ul>
+                   </div>
+              
                  </Fragment>
-              </div>
+              
             
               <MdClose className = "CloseModalButton"
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
           </div>
-          <div className="instructionsContainer">
-          <ul>
-            <li></li>
-          </ul>
-          </div>
-           </animated.div>
+         
+          
            </div>
            
       ) : null}
