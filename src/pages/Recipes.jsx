@@ -21,7 +21,7 @@ export default function Recipes() {
     fetchRecipes(recipes)
 
     if (recipes.length === 0 ) {
-      setMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination"
+      setMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination."
         );
     } else {
       setMessage('');
