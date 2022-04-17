@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useCallback, Fragment} from 'react';
 import { useSpring, animated } from 'react-spring';
 import { MdClose } from 'react-icons/md';
-import { MdOutlineMail} from 'react-icons/md';
+import { BsFillHeartFill } from 'react-icons/bs';
+
 
 import "./Modal.css"
 
@@ -78,8 +79,6 @@ console.log(recipe)
             );
           })}
         </ul>
-                
-                  <MdOutlineMail className="EmailIcon" />
                  </div>
                  <Fragment>
                    <div className="instructionsContainer">
@@ -95,6 +94,15 @@ console.log(recipe)
                 );
               })}
             </ul>
+             < BsFillHeartFill 
+             className="FavoritesIcon"
+             style={{
+              position: 'absolute',
+              bottom: '20px',
+              right: '20px',
+                }}
+              size="40px"
+              color="red" />
                    </div>
               
                  </Fragment>
