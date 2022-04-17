@@ -1,4 +1,4 @@
-import React, { useState, useContext, Fragment } from "react";
+import React, { useState, useContext, useEffect, Fragment } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
 import { BsFillHeartFill } from 'react-icons/bs';
 import { Link } from "react-router-dom";
@@ -15,6 +15,63 @@ export default function Recipes() {
   const {query, setQuery, time} = useContext(
     RecipeContext
   );
+
+  //favorites local storage
+  const [firstVisitor, setFirstVisitor] = useState(false);
+  const [favouritesState, setFavouritesState] = useState({
+        recipes: [],
+    });
+  const [showFireworks, setShowFireworks] = useState(false);
+  const [selectedRecipeState, setSelectedRecipeState] = useState({
+        recipes: [],
+    });
+  const toogleFavouriteHandler = (recipe) => {
+  const recipes = favouritesState.recipes;
+  const found = recipes.find(r => r.id === recipe.id);
+        let newRecipes = null;
+                if (!found) {
+            recipes.push(recipe);
+            newRecipes = recipes;
+          
+        } else {
+            newRecipes = recipes.filter(function (r) {
+                return r.id !== recipe.id;
+            });
+           
+        }
+
+        setFavouritesState({
+            recipes: newRecipes
+        });
+
+        localStorage.setItem('myFavourites', JSON.stringify(newRecipes));
+    }
+     
+  useEffect(() => {
+         setFavouritesState({
+            recipes: getRecipesLocalStorage('myFavourites')
+        });
+        setSelectedRecipeState({
+            recipes: getRecipesLocalStorage('mySelected')
+        });
+         if(!localStorage.getItem('firstVisitor')){
+            setFirstVisitor (true)
+            const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+            localStorage.setItem('firstVisitor', utc );
+        }
+ const getRecipesLocalStorage = (name) => {
+        const recipes = JSON.parse(localStorage.getItem(name));
+        return (recipes) ? recipes : [];
+    }
+    }, []);
+  const selectedRecipe = (recipe) => {
+        const newRecipes = [];
+        localStorage.setItem('mySelected', JSON.stringify(recipe));
+        //update states
+        setSelectedRecipeState({
+            recipes: recipe
+        });
+    }
 
   const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
@@ -46,6 +103,8 @@ export default function Recipes() {
         console.log(error);
       });
   };
+
+
     return (
     <>
     <div className="wrapper">
