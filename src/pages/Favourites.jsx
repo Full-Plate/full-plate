@@ -1,15 +1,13 @@
-import React, { useState, useContext, Fragment } from "react";
+import React, { useState, useContext } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
-import { BsFillHeartFill } from 'react-icons/bs';
-import { Link } from "react-router-dom";
 import RecipeTile from "../components/RecipeTile";
 //styles
-import "../styles/Recipes.css";
-import  cookingPot  from '../assets/cookingPot.svg';
+import "../styles/Favourites.css";
+import  basket  from '../assets/basket.png';
+
 const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
-
-export default function Recipes() {
+export default function Favourites() {
   const [recipes, setRecipes] = useState([]);
   const [message, setMessage] = useState();
   const {query, setQuery, time} = useContext(
@@ -46,17 +44,18 @@ export default function Recipes() {
         console.log(error);
       });
   };
+
     return (
     <>
     <div className="wrapper">
       <div className="recipesHeader">
-        <img className="cookingpot" src={cookingPot} alt="icon" />
+        <img className="basket" src={basket} alt="basket-fav-icon" />
         <div className="searchHeader">
-          <h1 className="pageTitle">Recipes</h1>
+          <h1 className="pageTitle">My Favourites</h1>
             <form class="search" onSubmit={onSubmit}>
               <input className="app__input"
                   type="text"
-                  placeholder="What´s left in my fridge?"
+                  placeholder="Search your saved recipes!"
                   autoComplete="Off"
                   value={query}
                   onChange={handleQueryChange}
@@ -67,35 +66,17 @@ export default function Recipes() {
                        onClick={fetchRecipes}/>
                   }} />
             </form>
-            <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex: Cheese, pasta, bread...etc</p>
           </div>
         </div>
-         
         <div className="app__recipes">
            {recipes.map((recipe) => {
              console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
-   <Fragment>
- <div className=" button-container">
-      <div className="favourties-button">
-          <Link to="/Favourites">       
-            <button className="buttonText"> <BsFillHeartFill
-             style={{
-              right: '20px',
-            
-                }}
-              size="25px"
-              color="red"
-              paddingLeft= "5px"
-          /> My Favourites</button> </Link>
-         </div>
-         </div>
-        </Fragment>
      </div >
-      
        <p className="noRecipeMessage">{message}</p>
     </div>
     </>
      );
 }
+

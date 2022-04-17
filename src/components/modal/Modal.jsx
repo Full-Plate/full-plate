@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useCallback, Fragment} from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring } from 'react-spring';
+import { Link } from "react-router-dom";
 import { MdClose } from 'react-icons/md';
 import { BsFillHeartFill } from 'react-icons/bs';
 
@@ -94,6 +95,7 @@ console.log(recipe)
                 );
               })}
             </ul>
+            <Link className="favourites-button" to="/Favourites">
              < BsFillHeartFill 
              className="FavoritesIcon"
              style={{
@@ -102,12 +104,10 @@ console.log(recipe)
               right: '20px',
                 }}
               size="40px"
-              color="red" />
+              color="red"
+              bounce /></Link>
                    </div>
-              
-                 </Fragment>
-              
-            
+                   </Fragment>
               <MdClose className = "CloseModalButton"
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}/>

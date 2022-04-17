@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import NotFound from './pages/NotFound'
+import Favourites from "./pages/Favourites";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/recipes" element={<Recipes/>} />
           <Route path="/donate" element={<Donate/>} />
           <Route path="/contact" element={<Contact/>} />
+           <Route path="/favourites" element={<Favourites/>} />
            <Route path='/notfound' element={<NotFound />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
