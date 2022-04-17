@@ -2,12 +2,12 @@ import React, { useRef, useEffect, useCallback, Fragment} from 'react';
 import { useSpring } from 'react-spring';
 import { Link } from "react-router-dom";
 import { MdClose } from 'react-icons/md';
-import { BsFillHeartFill } from 'react-icons/bs';
+import { AiOutlineHeart } from 'react-icons/ai';
 
 
 import "./Modal.css"
 
-
+ 
  export const Modal = ({ showModal, setShowModal, recipe }) => {
  const {
     extendedIngredients,
@@ -39,14 +39,6 @@ console.log(recipe)
       }
     },
     [setShowModal, showModal]
-  );
-
-  useEffect(
-    () => {
-      document.addEventListener('keydown', keyPress);
-      return () => document.removeEventListener('keydown', keyPress);
-    },
-    [keyPress]
   );
 
 
@@ -96,7 +88,7 @@ console.log(recipe)
               })}
             </ul>
             <Link className="favourites-button" to="/Favourites">
-             < BsFillHeartFill 
+             < AiOutlineHeart
              className="FavoritesIcon"
              style={{
               position: 'absolute',
@@ -104,12 +96,12 @@ console.log(recipe)
               right: '20px',
                 }}
               size="40px"
-              color="red"
-              bounce /></Link>
+              color="black"
+             /></Link>
                    </div>
                    </Fragment>
               <MdClose className = "CloseModalButton"
-                aria-label='Close modal'
+                aria-label='loseModal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
           </div>

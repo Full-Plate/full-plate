@@ -1,13 +1,11 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { RecipeContext } from "../Context/RecipeContext";
-import { BsFillHeartFill } from 'react-icons/bs';
 
 import RecipeTile from "../components/RecipeTile";
 //styles
 import "../styles/Favourites.css";
 import  basket  from '../assets/basket.png';
-const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
+
 
 
 export default function Favourites() {
@@ -25,7 +23,7 @@ export default function Favourites() {
                   placeholder="Search your saved recipes!"
                   autoComplete="Off"/>
             </form>
-            <p className="noFavourites">Looks like you don´t have any favorites yet. Go to recipes and search.</p>
+            <p className="noFavourites">Looks like you don´t have any favourites yet. Go to recipes and get started.</p>
              <Link  to="/Recipes">
             <button className="gotoRecipesButton"> Go to Recipes!</button>
             </Link>
