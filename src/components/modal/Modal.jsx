@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useCallback, Fragment} from 'react';
-import { useSpring } from 'react-spring';
+import React, {Fragment} from 'react';
 import { Link } from "react-router-dom";
 import { MdClose } from 'react-icons/md';
 import { AiOutlineHeart } from 'react-icons/ai';
@@ -15,34 +14,6 @@ import "./Modal.css"
 } = recipe;
 
 
-const modalRef = useRef(recipe);
-console.log(recipe)
-  const animation = useSpring({
-    config: {
-      duration: 250
-    },
-    opacity: showModal ? 1 : 0,
-    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
-  });
-
-  const closeModal = e => {
-    if (modalRef.current === e.target) {
-      setShowModal(false);
-    }
-  };
-
-  const keyPress = useCallback(
-    e => {
-      if (e.key === 'Escape' && showModal) {
-        setShowModal(false);
-        console.log('I pressed');
-      }
-    },
-    [setShowModal, showModal]
-  );
-
-
-  
   return (
     <>
       {showModal ? (
