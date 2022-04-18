@@ -53,7 +53,25 @@ export default function Recipes() {
     <>
     <div className="wrapper">
       <div className="recipesHeader">
+        <div className="potContainer">
         <img className="cookingpot" src={cookingPot} alt="icon" />
+        <Fragment>
+      <div className="favourties-button">
+          <Link to="/Favourites">       
+            <button className="buttonText"> <BsFillHeartFill
+             style={{
+              right: '20px',
+            
+                }}
+              size="25px"
+              color="red"
+              paddingLeft= "5px"
+          /> My Favourites</button> </Link>
+         
+         </div>
+        </Fragment>
+        </div>
+       
         <div className="searchHeader">
           <h1 className="pageTitle">Recipes</h1>
             <form class="search" onSubmit={onSubmit}>
@@ -79,22 +97,7 @@ export default function Recipes() {
              console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
-   <Fragment>
- <div className=" button-container">
-      <div className="favourties-button">
-          <Link to="/Favourites">       
-            <button className="buttonText"> <BsFillHeartFill
-             style={{
-              right: '20px',
-            
-                }}
-              size="25px"
-              color="red"
-              paddingLeft= "5px"
-          /> My Favourites</button> </Link>
-         </div>
-         </div>
-        </Fragment>
+   
      </div >
       
        <p className="noRecipeMessage">{message}</p>
