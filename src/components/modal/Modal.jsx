@@ -19,20 +19,10 @@ const [favouritesState, setFavouritesState] = useState({
     });
 
 
-/*const toogleFavouriteHandler = (recipe) => {
+const toogleFavouriteHandler = (recipe) => {
         const recipes = favouritesState.recipe;
-        const found = recipes.find(r => r.id === recipe.id);
-        if (!found) {
-            recipes.push(recipe);
-         
-           
-        } else {
-            newRecipes = recipes.filter(function (r) {
-                return r.id !== recipe.id;
-            });
-           
-        }
-      };*/
+        
+      };
 
     
   return (
@@ -81,10 +71,10 @@ const [favouritesState, setFavouritesState] = useState({
               </Fragment>
            
          <Heart className="favIcon" 
-            isClick={isClick} onClick={() => {setClick(!isClick); /*toogleFavouriteHandler(recipe); setFavouritesState(recipe)*/ }}/>
-                  
+            isClick={isClick} onClick={() => {setClick(!isClick);
+             toogleFavouriteHandler(recipe); setFavouritesState(recipe) }}/>
               <MdClose className = "CloseModalButton"
-                aria-label='loseModal'
+                aria-label='closeModal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
           </div>

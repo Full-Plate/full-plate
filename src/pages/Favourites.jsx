@@ -1,4 +1,4 @@
-import React, { useState, useEffect,  } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 //styles
@@ -6,15 +6,15 @@ import "../styles/Favourites.css";
 import  basket  from '../assets/basket.png';
 
 
-export default function Favourites({recipe, setFavouritesState, myFavourites}) {
+export default function Favourites({ get,recipe, setFavouritesState, myFavourites}) {
 
-   /* setFavouritesState({
+   setFavouritesState({
         recipe:localStorage.setItem(myFavourites, JSON.stringify(recipe))
     });
 
     get({
         recipe:localStorage.getItem(myFavourites, JSON.stringify(recipe))
-    });*/
+    });
 
 
     return (
