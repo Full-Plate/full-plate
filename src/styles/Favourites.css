@@ -57,8 +57,8 @@ transform-style: preserve-3d;
 .basket{
   position:relative;
   width: 25rem;
-  height: auto;
   z-index: -1;
+  height: 100%;
 }
 
 .app__input{
