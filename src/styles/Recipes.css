@@ -11,6 +11,7 @@
   width: 100%;
   justify-content: center;
   left: 258px;
+  align-content: center;
 }
 
 .searchHeader{
@@ -56,10 +57,10 @@ transform-style: preserve-3d;
 }
 
 .cookingpot{
-  position:relative;
   width: 250px;
   height: auto;
   z-index: -1;
+  margin-left: 15px;
 }
 
 .noRecipeMessage{
@@ -83,10 +84,14 @@ transform-style: preserve-3d;
   height:5rem;*/
  
 }
+ 
+.favourties-button{
+    width: 100%;
+  }
+
+
 .favourties-button button{
   font-family: 'Montserrat', sans-serif;
-  margin-top: -1rem;
-  margin-right: 53rem;
   background-color: #F9B686;
   border: 1px #F9B686;
   box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
@@ -95,16 +100,36 @@ transform-style: preserve-3d;
   width: 25rem;
   cursor: pointer;
   transition: ease-out 300ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
-.buttonText{
+.buttonText {
  color: #101828;
  font-weight: 500;
-font-size: 2.0rem;
-line-height: 25px;
+ font-size: 2.0rem;
+}
+
+.favourties-button a{
+  text-decoration: none;
+}
+
+.buttonText svg{
+  margin-right: 10px;
+}
+
+.potContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 
 @media screen and (max-width: 896px) {
+
+  .cookingpot {
+    margin-left: 0px;
+  }
   .recipesHeader{
     flex-flow: column wrap;
     align-items: center;
@@ -125,6 +150,13 @@ line-height: 25px;
   }
   .favourties-button button{
     align-items: center;
+    
    
+  }
+
+  .potContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
