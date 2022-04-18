@@ -14,7 +14,27 @@ import "./Modal.css"
 
 //heart icon event
 const [isClick, setClick] = useState(false);
+const [favouritesState, setFavouritesState] = useState({
+        recipe: [],
+    });
 
+
+/*const toogleFavouriteHandler = (recipe) => {
+        const recipes = favouritesState.recipe;
+        const found = recipes.find(r => r.id === recipe.id);
+        if (!found) {
+            recipes.push(recipe);
+         
+           
+        } else {
+            newRecipes = recipes.filter(function (r) {
+                return r.id !== recipe.id;
+            });
+           
+        }
+      };*/
+
+    
   return (
     <>
       {showModal ? (
@@ -60,18 +80,15 @@ const [isClick, setClick] = useState(false);
              </div>
               </Fragment>
            
-           <Heart className="favIcon"
-          isClick={isClick} onClick={() => setClick(!isClick)}/>
+         <Heart className="favIcon" 
+            isClick={isClick} onClick={() => {setClick(!isClick); /*toogleFavouriteHandler(recipe); setFavouritesState(recipe)*/ }}/>
                   
               <MdClose className = "CloseModalButton"
                 aria-label='loseModal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
           </div>
-         
-          
-           </div>
-           
+           </div>   
       ) : null}
     </>
   );

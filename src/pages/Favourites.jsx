@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState, useEffect,  } from "react";
 import { Link } from "react-router-dom";
 
-import {SaveFavoritesService} from "../components/SaveFavoritesService";
 //styles
 import "../styles/Favourites.css";
 import  basket  from '../assets/basket.png';
 
 
+export default function Favourites({recipe, setFavouritesState, myFavourites}) {
 
-export default function Favourites() {
+   /* setFavouritesState({
+        recipe:localStorage.setItem(myFavourites, JSON.stringify(recipe))
+    });
+
+    get({
+        recipe:localStorage.getItem(myFavourites, JSON.stringify(recipe))
+    });*/
+
 
     return (
     <>
@@ -36,4 +43,3 @@ export default function Favourites() {
     </>
      );
 }
-
