@@ -8,14 +8,14 @@ import  basket  from '../assets/basket.png';
 
 export default function Favourites({ get,recipe, setFavouritesState, myFavourites}) {
 
-   setFavouritesState({
+   /*setFavouritesState({
         recipe:localStorage.setItem(myFavourites, JSON.stringify(recipe))
     });
 
     get({
         recipe:localStorage.getItem(myFavourites, JSON.stringify(recipe))
     });
-
+*/
 
     return (
     <>

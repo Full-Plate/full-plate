@@ -14,7 +14,8 @@ import "./Modal.css"
 
 //heart icon event
 const [isClick, setClick] = useState(false);
-const [favouritesState, setFavouritesState] = useState({
+ 
+/*const [favouritesState, setFavouritesState] = useState({
         recipe: [],
     });
 
@@ -23,7 +24,7 @@ const toogleFavouriteHandler = (recipe) => {
         const recipes = favouritesState.recipe;
         
       };
-
+*/
     
   return (
     <>
@@ -72,7 +73,8 @@ const toogleFavouriteHandler = (recipe) => {
            
          <Heart className="favIcon" 
             isClick={isClick} onClick={() => {setClick(!isClick);
-             toogleFavouriteHandler(recipe); setFavouritesState(recipe) }}/>
+             /*toogleFavouriteHandler(recipe); setFavouritesState(recipe)*/ }}/>
+              
               <MdClose className = "CloseModalButton"
                 aria-label='closeModal'
                 onClick={() => setShowModal(prev => !prev)}/>
