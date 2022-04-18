@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
+
+
 import RecipeTile from "../components/RecipeTile";
 //styles
 import "../styles/Recipes.css";
@@ -9,23 +11,31 @@ const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
 export default function Recipes() {
   const [recipes, setRecipes] = useState([]);
-
+  const [message, setMessage] = useState();
   const {query, setQuery, time} = useContext(
     RecipeContext
   );
 
   const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
-    fetchRecipes();
-   
+    fetchRecipes(recipes)
+
+    if (recipes.length === 0 ) {
+      setMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination"
+        );
+    } else {
+      setMessage('');
+    }
+
   };
+
   function handleQueryChange(event) {
     setQuery(event.target.value);
   }
    
   const fetchRecipes = () => {
     fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}&fillIngredients=true`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=57e62f6e37d54fedb0dcc18c62a0187a&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}&fillIngredients=true`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -65,10 +75,8 @@ export default function Recipes() {
              console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
-{recipes.length === 0 &&
-<p>Sorry there are no recipes that match those ingredients</p>
-}
-     </div>
+     </div >
+       <p className="noRecipeMessage">{message}</p>
     </div>
     </>
      );
