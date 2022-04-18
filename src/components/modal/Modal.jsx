@@ -1,11 +1,12 @@
-import React, { useRef, useEffect, useCallback, Fragment} from 'react';
-import { useSpring, animated } from 'react-spring';
+import React, {Fragment} from 'react';
+import { Link } from "react-router-dom";
 import { MdClose } from 'react-icons/md';
-import { MdOutlineMail} from 'react-icons/md';
+import { AiOutlineHeart } from 'react-icons/ai';
+
 
 import "./Modal.css"
 
-
+ 
  export const Modal = ({ showModal, setShowModal, recipe }) => {
  const {
     extendedIngredients,
@@ -13,42 +14,6 @@ import "./Modal.css"
 } = recipe;
 
 
-const modalRef = useRef(recipe);
-console.log(recipe)
-  const animation = useSpring({
-    config: {
-      duration: 250
-    },
-    opacity: showModal ? 1 : 0,
-    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
-  });
-
-  const closeModal = e => {
-    if (modalRef.current === e.target) {
-      setShowModal(false);
-    }
-  };
-
-  const keyPress = useCallback(
-    e => {
-      if (e.key === 'Escape' && showModal) {
-        setShowModal(false);
-        console.log('I pressed');
-      }
-    },
-    [setShowModal, showModal]
-  );
-
-  useEffect(
-    () => {
-      document.addEventListener('keydown', keyPress);
-      return () => document.removeEventListener('keydown', keyPress);
-    },
-    [keyPress]
-  );
-
-
-  
   return (
     <>
       {showModal ? (
@@ -78,8 +43,6 @@ console.log(recipe)
             );
           })}
         </ul>
-                
-                  <MdOutlineMail className="EmailIcon" />
                  </div>
                  <Fragment>
                    <div className="instructionsContainer">
@@ -95,13 +58,21 @@ console.log(recipe)
                 );
               })}
             </ul>
+            <Link className="favourites-button" to="/Favourites">
+             < AiOutlineHeart
+             className="FavoritesIcon"
+             style={{
+              position: 'absolute',
+              bottom: '20px',
+              right: '20px',
+                }}
+              size="40px"
+              color="black"
+             /></Link>
                    </div>
-              
-                 </Fragment>
-              
-            
+                   </Fragment>
               <MdClose className = "CloseModalButton"
-                aria-label='Close modal'
+                aria-label='loseModal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
           </div>

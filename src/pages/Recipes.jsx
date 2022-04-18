@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect, Fragment } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
-
-
+import { BsFillHeartFill } from 'react-icons/bs';
+import { Link } from "react-router-dom";
 import RecipeTile from "../components/RecipeTile";
 //styles
 import "../styles/Recipes.css";
@@ -16,12 +16,13 @@ export default function Recipes() {
     RecipeContext
   );
 
+
   const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
     fetchRecipes(recipes)
 
     if (recipes.length === 0 ) {
-      setMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination"
+      setMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination."
         );
     } else {
       setMessage('');
@@ -46,6 +47,8 @@ export default function Recipes() {
         console.log(error);
       });
   };
+
+
     return (
     <>
     <div className="wrapper">
@@ -70,12 +73,30 @@ export default function Recipes() {
             <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex: Cheese, pasta, bread...etc</p>
           </div>
         </div>
+         
         <div className="app__recipes">
            {recipes.map((recipe) => {
              console.log(recipe)
             return <RecipeTile recipe={recipe} />    
 })}
+   <Fragment>
+ <div className=" button-container">
+      <div className="favourties-button">
+          <Link to="/Favourites">       
+            <button className="buttonText"> <BsFillHeartFill
+             style={{
+              right: '20px',
+            
+                }}
+              size="25px"
+              color="red"
+              paddingLeft= "5px"
+          /> My Favourites</button> </Link>
+         </div>
+         </div>
+        </Fragment>
      </div >
+      
        <p className="noRecipeMessage">{message}</p>
     </div>
     </>
