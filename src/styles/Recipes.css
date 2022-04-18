@@ -60,7 +60,6 @@ transform-style: preserve-3d;
   width: 250px;
   height: auto;
   z-index: -1;
-  margin-left: 15px;
 }
 
 .noRecipeMessage{
@@ -127,9 +126,6 @@ transform-style: preserve-3d;
 
 @media screen and (max-width: 896px) {
 
-  .cookingpot {
-    margin-left: 0px;
-  }
   .recipesHeader{
     flex-flow: column wrap;
     align-items: center;
