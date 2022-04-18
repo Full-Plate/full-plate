@@ -1,7 +1,6 @@
-import React, {Fragment} from 'react';
-import { Link } from "react-router-dom";
+import React, {Fragment, useState} from 'react';
 import { MdClose } from 'react-icons/md';
-import { AiOutlineHeart } from 'react-icons/ai';
+import Heart from "react-animated-heart";
 
 
 import "./Modal.css"
@@ -13,15 +12,15 @@ import "./Modal.css"
     analyzedInstructions,
 } = recipe;
 
+//heart icon event
+const [isClick, setClick] = useState(false);
 
   return (
     <>
       {showModal ? (
      
       <div className="Background" >
-         
             <div className="ModalWrapper" >
-            
               <div  className = "recipe-image">
               <h1>{recipe.title}</h1>
               <img src = {recipe.image}></img>
@@ -37,7 +36,7 @@ import "./Modal.css"
                         <ul>
           {extendedIngredients.map((ingredient) => {
             return (
-              <li className="text-sm text-gray-600 p-3 bg-gray-100 odd:bg-gray-200">
+              <li className="ingredientsList">
                 {ingredient.original}
               </li>
             );
@@ -58,18 +57,10 @@ import "./Modal.css"
                 );
               })}
             </ul>
-            <Link className="favourites-button" to="/Favourites">
-             < AiOutlineHeart
-             className="FavoritesIcon"
-             style={{
-              position: 'absolute',
-              bottom: '20px',
-              right: '20px',
-                }}
-              size="40px"
-              color="black"
-             /></Link>
+           
+              <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
                    </div>
+
                    </Fragment>
               <MdClose className = "CloseModalButton"
                 aria-label='loseModal'
