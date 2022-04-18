@@ -48,9 +48,8 @@
   width: 60%;
   height: 40%;
   object-fit: cover;
-
-border-radius: 20px;
-box-shadow: 5px 5px 20px 5px rgb(46, 45, 45);
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px 5px rgb(46, 45, 45);
 }
 
 .recipe-image p {
@@ -70,7 +69,6 @@ margin: 25px;
   line-height: 1.8;
   color: #141414;
   width: 50%;
-  
   margin-right: 10px;
 }
 
@@ -100,22 +98,6 @@ margin: 25px;
   cursor: pointer;
   transform: scale(135%);
 }
-
-.EmailIcon:hover{
-  cursor: pointer;
-}
-
-.EmailIcon{
-  
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 5rem;
-  height: 5rem;
-  padding: 0;
-  z-index: 10;
-}
-
 
 
 .cookingTime, .recipe-image h1
@@ -165,7 +147,10 @@ padding: 0px 50px 35px 50px;
 }
 
 
-
+.favIcon{
+  position: 'absolute';
+  margin-left: 10rem;
+}
 
 
 @media screen and (max-width:1050px){

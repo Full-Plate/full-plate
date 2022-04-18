@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import RecipeTile from "../components/RecipeTile";
+import {SaveFavoritesService} from "../components/SaveFavoritesService";
 //styles
 import "../styles/Favourites.css";
 import  basket  from '../assets/basket.png';
@@ -27,8 +27,10 @@ export default function Favourites() {
              <Link  to="/Recipes">
             <button className="gotoRecipesButton"> Go to Recipes!</button>
             </Link>
+              
          </div>
           </div>
+       
         </div>
    
     </>
