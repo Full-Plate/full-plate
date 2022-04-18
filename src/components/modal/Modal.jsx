@@ -57,11 +57,12 @@ const [isClick, setClick] = useState(false);
                 );
               })}
             </ul>
+             </div>
+              </Fragment>
            
-              <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
-                   </div>
-
-                   </Fragment>
+           <Heart className="favIcon"
+          isClick={isClick} onClick={() => setClick(!isClick)}/>
+                  
               <MdClose className = "CloseModalButton"
                 aria-label='loseModal'
                 onClick={() => setShowModal(prev => !prev)}/>
