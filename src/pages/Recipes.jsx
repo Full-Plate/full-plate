@@ -21,12 +21,12 @@ export default function Recipes() {
     e.preventDefault(); //this will prevent page from reloading.
     fetchRecipes(recipes)
 //error message
-    if (recipes.length === 0 ) {
+   /* if (recipes.length === 0 ) {
       setErrorMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination."
         );
     } else {
-      setErrorMessage('null');
-    }
+      setErrorMessage('');
+    }*/
 
   };
 
