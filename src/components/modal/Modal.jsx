@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import { MdClose } from 'react-icons/md';
-import Heart from "react-animated-heart";
+
 
 
 import "./Modal.css"
@@ -60,8 +60,7 @@ const [isClick, setClick] = useState(false);
              </div>
               </Fragment>
            
-           <Heart className="favIcon"
-          isClick={isClick} onClick={() => setClick(!isClick)}/>
+          
                   
               <MdClose className = "CloseModalButton"
                 aria-label='loseModal'
