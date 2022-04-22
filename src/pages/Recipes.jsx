@@ -75,6 +75,7 @@ export default function Recipes() {
         <div className="searchHeader">
           <h1 className="pageTitle">Recipes</h1>
             <form class="search" onSubmit={onSubmit}>
+              <label htmlFor="">
               <input className="app__input"
                   type="text"
                   placeholder="What´s left in my fridge?"
@@ -87,6 +88,8 @@ export default function Recipes() {
                        value = "Get Recipes"
                        onClick={fetchRecipes}/>
                   }} />
+                  <button />
+                  </label>
             </form>
             <p className="Search-Options">Psst, you can add up to 5 ingredients! Ex: Cheese, pasta, bread...etc</p>
           </div>

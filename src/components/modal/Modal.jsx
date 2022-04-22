@@ -3,6 +3,7 @@ import { MdClose } from 'react-icons/md';
 import Heart from "react-animated-heart";
 
 
+
 import "./Modal.css"
 
  
