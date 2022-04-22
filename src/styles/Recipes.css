@@ -1,102 +1,85 @@
-
-.pageTitle{
-  font-size:42px ;
-  font-weight: 600;
-  margin-bottom: 25px;
-  
+.pageTitle {
+	font-size: 42px;
+	font-weight: 600;
+	margin-bottom: 25px;
 }
-.recipesHeader{
-  margin-top: 59px;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  left: 258px;
-  align-content: center;
+.recipesHeader {
+	margin-top: 59px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	left: 258px;
+	align-content: center;
 }
-
-.searchHeader{
-  padding-left: 55px;
-  
+.searchHeader {
+	padding-left: 55px;
 }
-
 .search label {
-  position: relative;
-  
+	position: relative;
+  font-size: 0px;
 }
-
 .search button {
-  position: absolute;
-  top: -22px;
-  bottom: 0px;
-  right: 4px;
-  width: 70px;
-  height: 46px;
-  border-radius: 0px 17px 17px 0;
-  background-color: #F9B686;
-  border: none;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-position: 55% center;
-  transition: 250ms ease-in;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
+	position: absolute;
+	top: -32px;
+	bottom: 0px;
+	right: 4px;
+	width: 70px;
+	height: 46px;
+	border-radius: 0px 17px 17px 0;
+	background-color: #F9B686;
+	border: none;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 55% center;
+	transition: 250ms ease-in;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
 }
-
 .search button:hover, .search button:focus {
-  cursor: pointer;
-  border-style: inset;
+	cursor: pointer;
+	border-style: inset;
 }
-
-
-
-.app__input{
-font-family: 'Montserrat', sans-serif;
-background: #FEFEFE;
-border: 1px solid rgba(81, 103, 155, 0.5);
-box-sizing: border-box;
-border-radius: 20px;
-filter: drop-shadow(0px 3px 25px rgba(102, 112, 133, 0.25));
-width: 467px;
-height:52px;
-font-size: 24px;
-color: #000;
-padding: 6px 100px 6px 16px;
-opacity: 0.5;
-line-height: 29px;
+.app__input {
+	font-family: 'Montserrat', sans-serif;
+	background: #FEFEFE;
+	border: 1px solid rgba(81, 103, 155, 0.5);
+	box-sizing: border-box;
+	border-radius: 20px;
+	filter: drop-shadow(0px 3px 25px rgba(102, 112, 133, 0.25));
+	width: 467px;
+	height: 52px;
+	font-size: 24px;
+	color: #000;
+	padding: 6px 100px 6px 16px;
+	opacity: 0.5;
+	line-height: 29px;
 }
-
-
-
-.Search-Options{
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 20px;
-
+.Search-Options {
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 20px;
 }
-
 .app__recipes {
-  flex-wrap: wrap;
-  margin-top: 35px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: baseline;
+	flex-wrap: wrap;
+	margin-top: 35px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: baseline;
 }
-
-.cookingpot{
-  width: 250px;
-  height: auto;
-  z-index: -1;
+.cookingpot {
+	width: 250px;
+	height: auto;
+	z-index: -1;
 }
-
-.noRecipeMessage{
-  color: #000;
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 20px;
-  display: flex;
-  position:relative;
- /* flex-direction: column;
+.noRecipeMessage {
+	color: #000;
+	font-size: 20px;
+	font-weight: 400;
+	margin-top: 20px;
+	display: flex;
+	position: relative;
+	/* flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(81, 103, 155, 0.5);
@@ -108,82 +91,64 @@ line-height: 29px;
   filter: drop-shadow(0px 3px 25px rgba(102, 112, 133, 0.25));
   width: 50rem;
   height:5rem;*/
- 
 }
- 
-.favourties-button{
-    width: 100%;
-  }
-
-
-.favourties-button button{
-  font-family: 'Montserrat', sans-serif;
-  background-color: #F9B686;
-  border: 1px #F9B686;
-  box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
-  border-radius: 20px;
-  height: 4rem;
-  width: 25rem;
-  cursor: pointer;
-  transition: ease-out 300ms;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+.favourties-button {
+	width: 100%;
+}
+.favourties-button button {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #F9B686;
+	border: 1px #F9B686;
+	box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
+	border-radius: 20px;
+	height: 4rem;
+	width: 25rem;
+	cursor: pointer;
+	transition: ease-out 300ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
 }
 .buttonText {
- color: #101828;
- font-weight: 500;
- font-size: 2.0rem;
+	color: #101828;
+	font-weight: 500;
+	font-size: 2.0rem;
 }
-
-.favourties-button a{
-  text-decoration: none;
+.favourties-button a {
+	text-decoration: none;
 }
-
-.buttonText svg{
-  margin-right: 10px;
+.buttonText svg {
+	margin-right: 10px;
 }
-
 .potContainer {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
-
-
 @media screen and (max-width: 896px) {
-
-  .search button {
-    top: -21px;
-  }
-
-  .recipesHeader{
-    flex-flow: column wrap;
-    align-items: center;
-    text-align: center;
-  }
-
-  .searchHeader {
-    padding-left: 0 ;
-  }
-
-  .app__input{
-    width: 100%;
-    
-  }
-
-  .app__input::placeholder {
-    font-size: 1.4rem;
-  }
-  .favourties-button button{
-    align-items: center;
-    
-   
-  }
-
-  .potContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+	.search button {
+		top: -31px;
+	}
+	.recipesHeader {
+		flex-flow: column wrap;
+		align-items: center;
+		text-align: center;
+	}
+	.searchHeader {
+		padding-left: 0;
+	}
+	.app__input {
+		width: 100%;
+	}
+	.app__input::placeholder {
+		font-size: 1.4rem;
+	}
+	.favourties-button button {
+		align-items: center;
+	}
+	.potContainer {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
