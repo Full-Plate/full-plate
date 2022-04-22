@@ -11,12 +11,15 @@
 	left: 258px;
 	align-content: center;
 }
+
 .searchHeader {
 	padding-left: 55px;
 }
+
 .search label {
 	position: relative;
   font-size: 0px;
+	
 }
 .search button {
 	position: absolute;
