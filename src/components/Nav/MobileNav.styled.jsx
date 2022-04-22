@@ -6,6 +6,7 @@ list-style: none;
 display: none;
 
 
+
 div.navLinks {
   text-align: center;
   padding-top: 10px;
@@ -41,6 +42,7 @@ li.items {
   display: ${({ close }) => close ? 'flex': 'flex'};
   transform: ${({ close }) => close ? 'translateX(0)' : 'translateX(-100%)'};
   
+
   position: fixed;
   width: 356px;
   height: 896px;
@@ -50,7 +52,7 @@ li.items {
   box-shadow: 0px 3px 25px rgba(102, 112, 133, 0.25);
   border-radius: 0px 20px 20px 0px;
   transition: transform 0.3s;
- 
+  
 
   li.divider {
   margin-top: 20px;
