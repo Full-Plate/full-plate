@@ -36,7 +36,7 @@ export default function Recipes() {
    
   const fetchRecipes = () => {
     fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}&fillIngredients=true`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=daf6f11ad72c42afa53955fea64498f4&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}&fillIngredients=true`
     )
       .then((response) => response.json())
       .then((data) => {
