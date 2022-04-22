@@ -39,14 +39,14 @@
   margin-top: 20px;
 
 }
-
+/* 
 .app__recipes {
   flex-wrap: wrap;
   margin-top: 35px;
   display: flex;
   justify-content: space-evenly;
   align-items: baseline;
-}
+} */
 
 .basket{
   position:relative;
