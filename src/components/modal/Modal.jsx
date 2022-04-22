@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import { MdClose } from 'react-icons/md';
+import Heart from "react-animated-heart";
 
 
 
@@ -14,7 +15,18 @@ import "./Modal.css"
 
 //heart icon event
 const [isClick, setClick] = useState(false);
+ 
+/*const [favouritesState, setFavouritesState] = useState({
+        recipe: [],
+    });
 
+
+const toogleFavouriteHandler = (recipe) => {
+        const recipes = favouritesState.recipe;
+        
+      };
+*/
+    
   return (
     <>
       {showModal ? (
@@ -60,17 +72,16 @@ const [isClick, setClick] = useState(false);
              </div>
               </Fragment>
            
-          
-                  
+         <Heart className="favIcon" 
+            isClick={isClick} onClick={() => {setClick(!isClick);
+             /*toogleFavouriteHandler(recipe); setFavouritesState(recipe)*/ }}/>
+              
               <MdClose className = "CloseModalButton"
-                aria-label='loseModal'
+                aria-label='closeModal'
                 onClick={() => setShowModal(prev => !prev)}/>
             </div>
           </div>
-         
-          
-           </div>
-           
+           </div>   
       ) : null}
     </>
   );

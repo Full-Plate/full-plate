@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, Fragment } from "react";
+import React, { useState, useContext, Fragment } from "react";
 import { RecipeContext } from "../Context/RecipeContext";
 import { BsFillHeartFill } from 'react-icons/bs';
 import { Link } from "react-router-dom";
@@ -10,8 +10,8 @@ const apiKey = `${process.env.REACT_APP_RECIPE_API_KEY}`;
 
 
 export default function Recipes() {
+  const [errorMessage, setErrorMessage] = useState('');
   const [recipes, setRecipes] = useState([]);
-  const [message, setMessage] = useState();
   const {query, setQuery, time} = useContext(
     RecipeContext
   );
@@ -20,13 +20,13 @@ export default function Recipes() {
   const onSubmit = (e) => {
     e.preventDefault(); //this will prevent page from reloading.
     fetchRecipes(recipes)
-
-    if (recipes.length === 0 ) {
-      setMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination."
+//error message
+   /* if (recipes.length === 0 ) {
+      setErrorMessage("Oh No! We cound not find anything in out cookbookds for that. Please try another combination."
         );
     } else {
-      setMessage('');
-    }
+      setErrorMessage('');
+    }*/
 
   };
 
@@ -36,7 +36,7 @@ export default function Recipes() {
    
   const fetchRecipes = () => {
     fetch(
-          `https://api.spoonacular.com/recipes/complexSearch?apiKey=57e62f6e37d54fedb0dcc18c62a0187a&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}&fillIngredients=true`
+          `https://api.spoonacular.com/recipes/complexSearch?apiKey=604f2f74ba9e4a49966b3f1d094c498e&number=20&query=${query}&addRecipeInformation=true&includeIngredients=true&tags=true&instructionsRequired=true&maxReadyTime=${time}&fillIngredients=true`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -98,9 +98,8 @@ export default function Recipes() {
             return <RecipeTile recipe={recipe} />    
 })}
    
-     </div >
-      
-       <p className="noRecipeMessage">{message}</p>
+     </div>
+     {errorMessage && (<p className="noRecipeMessage">{errorMessage}</p>)}
     </div>
     </>
      );
