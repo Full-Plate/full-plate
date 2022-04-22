@@ -25,10 +25,13 @@ export default function Favourites({ get,recipe, setFavouritesState, myFavourite
         <div className="searchHeader">
           <h1 className="pageTitle">My Favourites</h1>
             <form class="search" >
+            <label htmlFor="">
               <input className="app__input"
                   type="text"
                   placeholder="Search your saved recipes!"
                   autoComplete="Off"/>
+                  <button />
+                  </label>
             </form>
             <p className="noFavourites">Looks like you don´t have any favourites yet. Go to recipes and get started.</p>
              <Link  to="/Recipes">
